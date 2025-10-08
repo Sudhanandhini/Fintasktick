@@ -236,7 +236,7 @@ const ProductsPage = () => {
                                 key={product.id}
                                 className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden group"
                             >
-                                <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-6 text-white">
+                                <div className="bg-gradient-to-r from-orange-300 to-orange-400 p-6 text-white">
                                     <div className="mb-3 text-[#002c60]">{product.icon}</div>
                                     <h3 className="text-2xl font-bold ">{product.title}</h3>
                                     <p className="text-orange-100 mt-2">{product.shortDesc}</p>

@@ -277,7 +277,7 @@ const Footer = ({ services = [], companyLinks = [] }) => {
             <div className="bg-blue-900 border-t border-blue-800">
                 <div className="max-w-7xl mx-auto px-4 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center text-sm text-blue-200">
-                        <p>Copyright © 2025 </p>
+                        <p>Copyright © Fintastick 2025 </p>
                         <div className="flex gap-6 mt-4 md:mt-0">
                             <Link to="https://www.sunsys.in/" className="hover:text-white">Developed By Sunsys Technologies</Link>
 
