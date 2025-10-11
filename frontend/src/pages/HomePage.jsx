@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Clock, Users, TrendingUp, Home, Car, GraduationCap, Building2, Briefcase, Coins, ChevronLeft, ChevronRight } from 'lucide-react';
-import heroBg1 from '../assets/about.jpg';
-import heroBg2 from '../assets/about2.jpg';
-import heroBg3 from '../assets/bg-pheader.jpg';
+import { ArrowRight, Shield, Clock, Users, TrendingUp, Home, Car, GraduationCap, Building2, Briefcase, Coins, ChevronLeft, DollarSign,Cog, ChevronRight, CreditCard  } from 'lucide-react';
+import heroBg1 from '../assets/14.png';
+import heroBg2 from '../assets/2.png';
+import heroBg3 from '../assets/3.png';
 
 // Counter Component
 const Counter = ({ end, suffix, label, inView, duration = 2000 }) => {
@@ -108,7 +108,7 @@ const HomePage = () => {
     { end: 100, suffix: '+ Cr', label: 'Unsecured Loans Disbursed' },
     { end: 500, suffix: '+ Cr', label: 'Secured Loans Disbursed' },
     { end: 2, suffix: '+ Cr', label: 'Insurance' },
-    { end: 5000, suffix: '+', label: 'Clients Serviced' }
+    { end: 3000, suffix: '+', label: 'Clients Serviced' }
   ];
 
   useEffect(() => {
@@ -151,12 +151,7 @@ const HomePage = () => {
   ];
 
   const products = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Personal Loan',
-      description: 'Quick funds for any purpose without collateral or extensive documentation.',
-      path: '/products'
-    },
+   
     {
       icon: <Home className="w-8 h-8" />,
       title: 'Home Loan',
@@ -167,6 +162,12 @@ const HomePage = () => {
       icon: <Building2 className="w-8 h-8" />,
       title: 'Mortgage Loan',
       description: 'Leverage your property value to meet diverse financial needs.',
+      path: '/products'
+    },
+     {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Personal Loan',
+      description: 'Quick funds for any purpose without collateral or extensive documentation.',
       path: '/products'
     },
     {
@@ -181,6 +182,31 @@ const HomePage = () => {
       description: 'Turn your dream car into reality with attractive rates.',
       path: '/products'
     },
+     {
+      icon: <GraduationCap className="w-8 h-8" />,
+      title: 'Education Loan',
+      description: 'Invest in your future with education loan benefits.',
+      path: '/products'
+    },
+    {
+      icon: <DollarSign className="w-8 h-8" />,
+      title: 'OD Loan',
+      description: 'Ensures financial flexibility in emergencies.',
+      path: '/products'
+    },
+     {
+      icon: <Cog className="w-8 h-8" />,
+      title: 'Machinery Loan',
+      description: 'Enhance productivity with our Machinery Loan options.',
+      path: '/products'
+    },
+
+     {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: 'Working Capital',
+      description: 'Meet recurring expenses and ensure smooth business operations.',
+      path: '/products'
+    },
     {
       icon: <Coins className="w-8 h-8" />,
       title: 'Gold Loan',
@@ -189,16 +215,18 @@ const HomePage = () => {
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Working Capital',
-      description: 'Meet recurring expenses and ensure smooth business operations.',
+      title: 'Insurance',
+      description: 'Protect your life, health, and assets with comprehensive coverage.',
       path: '/products'
     },
     {
-      icon: <GraduationCap className="w-8 h-8" />,
-      title: 'Education Loan',
-      description: 'Invest in your future with education loan benefits.',
+      icon: <CreditCard  className="w-8 h-8" />,
+      title: 'Credit Card Loan',
+      description: 'Turn your credit card limit into instant cash with a Credit Card Loan.',
       path: '/products'
-    }
+    },
+    
+    
   ];
 
   return (
@@ -225,7 +253,7 @@ const HomePage = () => {
               ></div>
 
               {/* Dark Overlay */}
-              <div className="absolute inset-0  bg-opacity-70"></div>
+              <div className="absolute inset-0  bg-opacity-100"></div>
 
               {/* Content */}
               <div className="absolute inset-0 flex items-center">
@@ -261,7 +289,7 @@ const HomePage = () => {
         {/* Previous Button */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all z-20"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all z-20"
           aria-label="Previous slide"
         >
           <ChevronLeft size={24} />
@@ -270,7 +298,7 @@ const HomePage = () => {
         {/* Next Button */}
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all z-20"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all z-20"
           aria-label="Next slide"
         >
           <ChevronRight size={24} />

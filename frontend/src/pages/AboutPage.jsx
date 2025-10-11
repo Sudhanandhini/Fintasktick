@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Target, Eye, Award, Users, TrendingUp, CheckCircle } from 'lucide-react';
-import heroBg3 from '../assets/about.jpg';
+import heroBg3 from '../assets/6.png';
 import heroBg4 from '../assets/about2.jpg';
 
 // Counter Component - moved outside

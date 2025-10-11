@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import heroBg2 from '../assets/contact.jpg';
+import heroBg2 from '../assets/4.png';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -70,25 +70,25 @@ const ContactPage = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      details: ['+91 (97) 814-3527', '+91 (80) 1234-5678'],
+      details: ['+91 9164366690'],
       color: 'orange'
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      details: ['info@fintasktick.com', 'support@fintasktick.com'],
+      details: ['fintasktick@gmail.com'],
       color: 'blue'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Address',
-      details: ['London City, England', 'View on Google Maps'],
+      details: ['#99/A, 16th Main, 5th Cross', 'Sri Rama Arcade', 'Opposite to Maggi Adda', 'Vijayanagar, Bangalore 560040'],
       color: 'green'
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: 'Business Hours',
-      details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 10:00 AM - 4:00 PM'],
+      details: ['Mon - Fri: 10:00 AM - 6:30 PM', 'Sat: 10:00 AM - 5:00 PM'],
       color: 'purple'
     }
   ];
@@ -114,7 +114,7 @@ const ContactPage = () => {
           style={{ backgroundImage: `url(${heroBg2})` }}
         ></div>
         <div className="absolute inset-0 bg-opacity-70"></div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -300,7 +300,7 @@ const ContactPage = () => {
             {/* Map & Info */}
             <div className="space-y-6">
               <div className="bg-gray-200 rounded-lg overflow-hidden h-64 lg:h-96">
-                <iframe
+                {/* <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5289533325054!2d-0.12765908423068!3d51.50735097963533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slondon!5e0!3m2!1sen!2suk!4v1234567890123!5m2!1sen!2suk"
                   width="100%"
                   height="100%"
@@ -308,7 +308,12 @@ const ContactPage = () => {
                   allowFullScreen=""
                   loading="lazy"
                   title="Office Location"
-                ></iframe>
+                ></iframe> */}
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4829.672221710474!2d77.53805349999999!3d12.969412000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d005212915b%3A0x679c647205a2e952!2sFintasktick%20Business%20Solutions!5e1!3m2!1sen!2sin!4v1760166629705!5m2!1sen!2sin" 
+                width="600" height="450"  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  title="Office Location"></iframe>
               </div>
 
               <div className="bg-gradient-to-br from-orange-50 to-blue-50 p-8 rounded-lg">

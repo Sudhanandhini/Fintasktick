@@ -10,7 +10,7 @@ const Header = () => {
     { name: 'HOME', path: '/', hasDropdown: false },
     { name: 'ABOUT', path: '/about', hasDropdown: false },
     { name: 'PRODUCTS', path: '/products', hasDropdown: false },
-    { name: 'SERVICES', path: '/services', hasDropdown: false },
+    { name: 'OTHER SERVICES', path: '/services', hasDropdown: false },
     { name: 'CONTACT', path: '/contact', hasDropdown: false },
   ];
 
@@ -23,13 +23,13 @@ const Header = () => {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <MapPin size={16} className="text-orange-500" />
-              <span>London City, England ( <a href="#" className="underline hover:text-orange-500">View map</a> )</span>
+              <span>Vijayanagar, Bangalore( <a href="https://maps.app.goo.gl/hEMV4RHSMcK7RDte6" className="underline hover:text-orange-500">View map</a> )</span>
             </div>
             
             {/* Phone */}
             <div className="hidden md:flex items-center gap-2">
               <Phone size={16} className="text-orange-500" />
-              <span>(+97) 814 - 3527</span>
+              <span>9164366690</span>
             </div>
           </div>
 
