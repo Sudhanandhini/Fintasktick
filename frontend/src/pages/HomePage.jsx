@@ -58,7 +58,7 @@ const HomePage = () => {
   const slides = [
     {
       image: heroBg1,
-      title: 'Welcome to Fintasktick - Your Trusted Loan DSA!',
+      title: 'Welcome to Fintasktick - Your Trusted Loan Partners!',
       description: 'Fintasktick is your trusted partner in helping you find the best financial products that meet your specific requirements.',
       primaryBtn: { text: 'Explore Products', link: '/products' },
       secondaryBtn: { text: 'Contact Us', link: '/contact' }

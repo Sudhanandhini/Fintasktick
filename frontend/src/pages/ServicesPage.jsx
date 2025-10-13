@@ -154,7 +154,7 @@ const ServicesPage = () => {
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="max-w-3xl">
                         <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                            Our Services
+                            Other Services
                         </h1>
                         <p className="text-xl mb-8 text-blue-100">
                             Comprehensive business and financial services beyond lending
@@ -341,7 +341,7 @@ const ServicesPage = () => {
                     </div>
 
                     <div className="grid md:grid-cols-4 gap-6">
-                        {['Manufacturing', 'Retail', 'Real Estate', 'Healthcare', 'Education', 'Hospitality', 'IT Services', 'Construction'].map((industry, index) => (
+                        {['Manufacturing', 'Traders' , 'Service providers' , 'IT Services' ,  'Real Estate', 'Retail', 'Education'].map((industry, index) => (
                             <div key={index} className="bg-gradient-to-br from-orange-50 to-blue-50 p-6 rounded-lg text-center hover:shadow-md transition-shadow">
                                 <Building className="w-10 h-10 text-orange-500 mx-auto mb-3" />
                                 <h3 className="font-semibold text-gray-900">{industry}</h3>

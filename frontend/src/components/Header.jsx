@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Twitter, Facebook, Linkedin, Rss, ChevronDown, Menu, X } from 'lucide-react';
-import logo from '../assets/resized-image.jpg'
+import logo from '../assets/logo-full.png'
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,11 +25,16 @@ const Header = () => {
               <MapPin size={16} className="text-orange-500" />
               <span>Vijayanagar, Bangalore( <a href="https://maps.app.goo.gl/hEMV4RHSMcK7RDte6" className="underline hover:text-orange-500">View map</a> )</span>
             </div>
-            
+
             {/* Phone */}
             <div className="hidden md:flex items-center gap-2">
               <Phone size={16} className="text-orange-500" />
-              <span>9164366690</span>
+              <a
+                href="tel:9164366690"
+                className="hover:text-orange-500 transition-colors duration-200"
+              >
+                9164366690
+              </a>
             </div>
           </div>
 
@@ -81,7 +86,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="lg:hidden text-gray-700"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >

@@ -10,20 +10,7 @@ import { useNavigate } from "react-router-dom";
 const ProductsPage = () => {
     const navigate = useNavigate();
     const products = [
-        {
-            id: 3,
-            icon: <Users className="w-12 h-12" />,
-            title: 'Personal Loan',
-            shortDesc: 'Quick funds for any purpose without collateral',
-            features: [
-                'No collateral required',
-                'Minimal documentation',
-                'Quick approval process',
-                'Flexible repayment options',
-                'Competitive interest rates'
-            ],
-            description: 'Need quick funds for any purpose? With Fintasktick, get a Personal Loan without collateral or heavy paperwork. Perfect for weddings, vacations, renovations, or emergencies.'
-        },
+       
         {
             id: 1,
             icon: <Home className="w-12 h-12" />,
@@ -51,6 +38,20 @@ const ProductsPage = () => {
                 'Quick processing'
             ],
             description: 'Leverage your property for financial support. Loan Against Property (LAP) helps fund education, renovations, or business growth.'
+        },
+         {
+            id: 3,
+            icon: <Users className="w-12 h-12" />,
+            title: 'Personal Loan',
+            shortDesc: 'Quick funds for any purpose without collateral',
+            features: [
+                'No collateral required',
+                'Minimal documentation',
+                'Quick approval process',
+                'Flexible repayment options',
+                'Competitive interest rates'
+            ],
+            description: 'Need quick funds for any purpose? With Fintasktick, get a Personal Loan without collateral or heavy paperwork. Perfect for weddings, vacations, renovations, or emergencies.'
         },
         {
             id: 4,
@@ -80,20 +81,21 @@ const ProductsPage = () => {
             ],
             description: 'Own your dream car easily with flexible EMIs and low interest rates on our Car Loan options.'
         },
-        {
-            id: 10,
-            icon: <Coins className="w-12 h-12" />,
-            title: 'Gold Loan',
-            shortDesc: 'Unlock the power of your gold',
+         {
+            id: 6,
+            icon: <GraduationCap className="w-12 h-12" />,
+            title: 'Education Loan',
+            shortDesc: 'Invest in your future',
             features: [
-                'Competitive interest rates',
-                'Minimal documentation',
-                'Quick disbursement',
-                'Secure gold storage',
-                'Easy repayment'
+                'Cover tuition fees',
+                'Study materials funding',
+                'Living expenses',
+                'Moratorium period',
+                'Tax benefits'
             ],
-            description: 'Get instant funds by pledging your gold. Safe, fast, and hassle-free with competitive rates.'
+            description: 'Secure your future with our Education Loan options, designed to make higher education affordable and accessible.'
         },
+       
         {
             id: 7,
             icon: <DollarSign className="w-12 h-12" />,
@@ -107,6 +109,20 @@ const ProductsPage = () => {
                 'Quick activation'
             ],
             description: 'Our Overdraft (OD) Loan ensures financial flexibility in emergencies — borrow only what you use.'
+        },
+         {
+            id: 8,
+            icon: <Cog className="w-12 h-12" />,
+            title: 'Machinery Loan',
+            shortDesc: 'Upgrade your business equipment',
+            features: [
+                'New machinery purchase',
+                'Equipment upgrade',
+                'Attractive interest rates',
+                'Flexible repayment tenure',
+                'Quick processing'
+            ],
+            description: 'Enhance productivity with our Machinery Loan — finance new equipment or upgrades with ease.'
         },
         {
             id: 9,
@@ -122,34 +138,35 @@ const ProductsPage = () => {
             ],
             description: 'Keep your business running smoothly with our Working Capital Loan — perfect for managing daily expenses and cash flow.'
         },
-        {
-            id: 6,
-            icon: <GraduationCap className="w-12 h-12" />,
-            title: 'Education Loan',
-            shortDesc: 'Invest in your future',
+         {
+            id: 10,
+            icon: <Coins className="w-12 h-12" />,
+            title: 'Gold Loan',
+            shortDesc: 'Unlock the power of your gold',
             features: [
-                'Cover tuition fees',
-                'Study materials funding',
-                'Living expenses',
-                'Moratorium period',
-                'Tax benefits'
+                'Competitive interest rates',
+                'Minimal documentation',
+                'Quick disbursement',
+                'Secure gold storage',
+                'Easy repayment'
             ],
-            description: 'Secure your future with our Education Loan options, designed to make higher education affordable and accessible.'
+            description: 'Get instant funds by pledging your gold. Safe, fast, and hassle-free with competitive rates.'
         },
-        {
-            id: 8,
-            icon: <Cog className="w-12 h-12" />,
-            title: 'Machinery Loan',
-            shortDesc: 'Upgrade your business equipment',
+       {
+            id: 11,
+            icon: <ShieldCheck className="w-12 h-12" />,
+            title: 'Insurance',
+            shortDesc: 'Protect your life, health, and assets',
             features: [
-                'New machinery purchase',
-                'Equipment upgrade',
-                'Attractive interest rates',
-                'Flexible repayment tenure',
-                'Quick processing'
+                'Life, health & vehicle coverage',
+                'Flexible premiums',
+                'Tax benefits',
+                'Hassle-free claim process',
+                'Wide network support'
             ],
-            description: 'Enhance productivity with our Machinery Loan — finance new equipment or upgrades with ease.'
+            description: 'Ensure financial protection with our comprehensive insurance plans covering health, life, vehicle, and more.'
         },
+       
         {
             id: 12,
             icon: <CreditCard className="w-12 h-12" />,
@@ -164,20 +181,7 @@ const ProductsPage = () => {
             ],
             description: 'Turn your credit card limit into instant cash with a Credit Card Loan. Quick, convenient, and secure.'
         },
-        {
-            id: 11,
-            icon: <ShieldCheck className="w-12 h-12" />,
-            title: 'Insurance',
-            shortDesc: 'Protect your life, health, and assets',
-            features: [
-                'Life, health & vehicle coverage',
-                'Flexible premiums',
-                'Tax benefits',
-                'Hassle-free claim process',
-                'Wide network support'
-            ],
-            description: 'Ensure financial protection with our comprehensive insurance plans covering health, life, vehicle, and more.'
-        }
+        
     ];
 
     return (
