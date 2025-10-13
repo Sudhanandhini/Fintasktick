@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import heroBg2 from '../assets/4.png';
+import heroBg2 from '../assets/4.jpg';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({

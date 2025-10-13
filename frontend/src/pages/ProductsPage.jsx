@@ -4,7 +4,7 @@ import {
     TrendingUp, GraduationCap, Cog, DollarSign, ChevronRight,
     CreditCard, ShieldCheck, Phone
 } from 'lucide-react';
-import heroBg from '../assets/5.png';
+import heroBg from '../assets/5.jpg';
 import { useNavigate } from "react-router-dom";
 
 const ProductsPage = () => {

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Clock, Users, TrendingUp, Home, Car, GraduationCap, Building2, Briefcase, Coins, ChevronLeft, DollarSign,Cog, ChevronRight, CreditCard  } from 'lucide-react';
-import heroBg1 from '../assets/14.png';
-import heroBg2 from '../assets/2.png';
-import heroBg3 from '../assets/3.png';
+import heroBg1 from '../assets/14.jpg';
+import heroBg2 from '../assets/2.jpg';
+import heroBg3 from '../assets/3.jpg';
 
 // Counter Component
 const Counter = ({ end, suffix, label, inView, duration = 2000 }) => {

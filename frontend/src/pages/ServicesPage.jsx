@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FileText, Scale, Building, Shield, Calculator, BookOpen, ClipboardCheck, Briefcase, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
-import heroBg1 from '../assets/7.png';
+import heroBg1 from '../assets/7.jpg';
 
 const ServicesPage = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
