@@ -151,20 +151,25 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="py-16 px-4">
+
+
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-              <p className="text-gray-600 mb-6">
-                Fill out the form below and our team will get back to you within 24 hours
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-12">
+
+            {/* Contact Form */}
+            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+                Send Us a Message
+              </h2>
+              <p className="text-gray-600 mb-6 text-sm sm:text-base">
+                Fill out the form below and our team will get back to you within 24 hours.
               </p>
 
               {submitted && (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 flex items-center gap-3">
                   <CheckCircle className="text-green-600" />
-                  <p className="text-green-800 font-semibold">
+                  <p className="text-green-800 font-semibold text-sm sm:text-base">
                     Thank you! Your message has been sent successfully.
                   </p>
                 </div>
@@ -173,7 +178,7 @@ const ContactPage = () => {
               {error && (
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 flex items-center gap-3">
                   <AlertCircle className="text-red-600" />
-                  <p className="text-red-800 font-semibold">
+                  <p className="text-red-800 font-semibold text-sm sm:text-base">
                     Failed to send message. Please try again.
                   </p>
                 </div>
@@ -190,12 +195,12 @@ const ContactPage = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
                     placeholder="Enter your full name"
                   />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-gray-700 font-semibold mb-2">
                       Email Address *
@@ -206,7 +211,7 @@ const ContactPage = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -221,13 +226,13 @@ const ContactPage = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
                       placeholder="+91 1234567890"
                     />
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-gray-700 font-semibold mb-2">
                       Loan Type *
@@ -237,7 +242,7 @@ const ContactPage = () => {
                       value={formData.loanType}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
                     >
                       <option value="">Select loan type</option>
                       {loanTypes.map((type, index) => (
@@ -257,7 +262,7 @@ const ContactPage = () => {
                       name="amount"
                       value={formData.amount}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
                       placeholder="₹ 5,00,000"
                     />
                   </div>
@@ -272,7 +277,7 @@ const ContactPage = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="4"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
                     placeholder="Tell us more about your requirements..."
                   ></textarea>
                 </div>
@@ -299,28 +304,23 @@ const ContactPage = () => {
 
             {/* Map & Info */}
             <div className="space-y-6">
-              <div className="bg-gray-200 rounded-lg overflow-hidden h-64 lg:h-96">
-                {/* <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5289533325054!2d-0.12765908423068!3d51.50735097963533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slondon!5e0!3m2!1sen!2suk!4v1234567890123!5m2!1sen!2suk"
+              <div className="bg-gray-200 rounded-lg overflow-hidden h-64 sm:h-80 lg:h-96">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4829.672221710474!2d77.53805349999999!3d12.969412000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d005212915b%3A0x679c647205a2e952!2sFintasktick%20Business%20Solutions!5e1!3m2!1sen!2sin!4v1760166629705!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
                   title="Office Location"
-                ></iframe> */}
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4829.672221710474!2d77.53805349999999!3d12.969412000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d005212915b%3A0x679c647205a2e952!2sFintasktick%20Business%20Solutions!5e1!3m2!1sen!2sin!4v1760166629705!5m2!1sen!2sin" 
-                width="600" height="450"  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  title="Office Location"></iframe>
+                ></iframe>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-blue-50 p-8 rounded-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <div className="bg-gradient-to-br from-orange-50 to-blue-50 p-6 sm:p-8 rounded-lg">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
                   Why Contact Us?
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-3 text-sm sm:text-base">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="text-orange-500 flex-shrink-0 mt-1" size={20} />
                     <span className="text-gray-700">Get expert financial advice</span>
@@ -343,6 +343,7 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
+
 
       {/* FAQ Section */}
       <section className="py-16 px-4 bg-gray-50">
