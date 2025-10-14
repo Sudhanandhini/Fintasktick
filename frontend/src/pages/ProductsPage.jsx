@@ -23,7 +23,8 @@ const ProductsPage = () => {
                 'Tax benefits available',
                 'Pre-approved options'
             ],
-            description: 'Find your dream home easily. We offer Home Loans with low interest, long tenure, and flexible repayment options through our partner banks.'
+            description: 'Find your dream home easily. We offer Home Loans with low interest, long tenure, and flexible repayment options through our partner banks.',
+            path: '/homeloan'
         },
         {
             id: 2,
@@ -37,7 +38,8 @@ const ProductsPage = () => {
                 'Multiple property types',
                 'Quick processing'
             ],
-            description: 'Leverage your property for financial support. Loan Against Property (LAP) helps fund education, renovations, or business growth.'
+            description: 'Leverage your property for financial support. Loan Against Property (LAP) helps fund education, renovations, or business growth.',
+            path: '/mortgageloan'
         },
          {
             id: 3,
@@ -51,7 +53,8 @@ const ProductsPage = () => {
                 'Flexible repayment options',
                 'Competitive interest rates'
             ],
-            description: 'Need quick funds for any purpose? With Fintasktick, get a Personal Loan without collateral or heavy paperwork. Perfect for weddings, vacations, renovations, or emergencies.'
+            description: 'Need quick funds for any purpose? With Fintasktick, get a Personal Loan without collateral or heavy paperwork. Perfect for weddings, vacations, renovations, or emergencies.',
+            path: '/personalloan'
         },
         {
             id: 4,
@@ -65,7 +68,8 @@ const ProductsPage = () => {
                 'Working capital support',
                 'Business expansion funding'
             ],
-            description: 'Boost your business with our customized Business Loan options — quick disbursal, flexible repayment, and easy processing.'
+            description: 'Boost your business with our customized Business Loan options — quick disbursal, flexible repayment, and easy processing.',
+            path: '/businessloan'
         },
         {
             id: 5,
@@ -79,7 +83,8 @@ const ProductsPage = () => {
                 'New and used cars',
                 'Quick approval'
             ],
-            description: 'Own your dream car easily with flexible EMIs and low interest rates on our Car Loan options.'
+            description: 'Own your dream car easily with flexible EMIs and low interest rates on our Car Loan options.',
+            path: '/carloan'
         },
          {
             id: 6,
@@ -93,7 +98,8 @@ const ProductsPage = () => {
                 'Moratorium period',
                 'Tax benefits'
             ],
-            description: 'Secure your future with our Education Loan options, designed to make higher education affordable and accessible.'
+            description: 'Secure your future with our Education Loan options, designed to make higher education affordable and accessible.',
+            path: '/educationloan'
         },
        
         {
@@ -108,7 +114,8 @@ const ProductsPage = () => {
                 'No prepayment charges',
                 'Quick activation'
             ],
-            description: 'Our Overdraft (OD) Loan ensures financial flexibility in emergencies — borrow only what you use.'
+            description: 'Our Overdraft (OD) Loan ensures financial flexibility in emergencies — borrow only what you use.',
+            path: '/odloan'
         },
          {
             id: 8,
@@ -122,7 +129,8 @@ const ProductsPage = () => {
                 'Flexible repayment tenure',
                 'Quick processing'
             ],
-            description: 'Enhance productivity with our Machinery Loan — finance new equipment or upgrades with ease.'
+            description: 'Enhance productivity with our Machinery Loan — finance new equipment or upgrades with ease.',
+            path: '/machineryloan'
         },
         {
             id: 9,
@@ -136,7 +144,8 @@ const ProductsPage = () => {
                 'Seasonal business support',
                 'Flexible repayment'
             ],
-            description: 'Keep your business running smoothly with our Working Capital Loan — perfect for managing daily expenses and cash flow.'
+            description: 'Keep your business running smoothly with our Working Capital Loan — perfect for managing daily expenses and cash flow.',
+            path: '/workingcapitalloan'
         },
          {
             id: 10,
@@ -150,7 +159,8 @@ const ProductsPage = () => {
                 'Secure gold storage',
                 'Easy repayment'
             ],
-            description: 'Get instant funds by pledging your gold. Safe, fast, and hassle-free with competitive rates.'
+            description: 'Get instant funds by pledging your gold. Safe, fast, and hassle-free with competitive rates.',
+            path: '/goldloan'
         },
        {
             id: 11,
@@ -164,7 +174,8 @@ const ProductsPage = () => {
                 'Hassle-free claim process',
                 'Wide network support'
             ],
-            description: 'Ensure financial protection with our comprehensive insurance plans covering health, life, vehicle, and more.'
+            description: 'Ensure financial protection with our comprehensive insurance plans covering health, life, vehicle, and more.',
+            path: '/insuranceloan'
         },
        
         {
@@ -179,7 +190,8 @@ const ProductsPage = () => {
                 'Competitive rates',
                 'Online application'
             ],
-            description: 'Turn your credit card limit into instant cash with a Credit Card Loan. Quick, convenient, and secure.'
+            description: 'Turn your credit card limit into instant cash with a Credit Card Loan. Quick, convenient, and secure.',
+            path: '/creditcardloan'
         },
         
     ];
@@ -235,7 +247,7 @@ const ProductsPage = () => {
                                         </ul>
                                     </div>
                                     <button
-                                        onClick={() => navigate("/contact")}
+                                        onClick={() => navigate(`${product.path}`)}
                                         className="w-full bg-gradient-to-r from-blue-900 to-blue-700 text-white py-3 rounded font-semibold transition-colors flex items-center justify-center gap-2 hover:from-blue-800 hover:to-blue-600"
                                     >
                                         Enquire Now <ChevronRight size={18} />

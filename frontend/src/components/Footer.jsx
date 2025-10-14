@@ -76,7 +76,7 @@ const Footer = ({ services = [], companyLinks = [] }) => {
                                     <li>
                                         <Link to="/services" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                             <ChevronRight size={16} className="mr-2" />
-                                            Services
+                                            Other Services
                                         </Link>
                                     </li>
                                     <li>
@@ -109,126 +109,163 @@ const Footer = ({ services = [], companyLinks = [] }) => {
                         ) : (
                             <ul className="space-y-3">
                                  <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/homeloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
                                         Home Loan
                                     </Link>
                                 </li>
                                  <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/mortgageloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
                                         Mortgage
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/personalloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
                                         Personal Loan
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/businessloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
                                         Business Loan
                                     </Link>
                                 </li>
                                
                                 <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/carloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
                                         Car Loan
                                     </Link>
                                 </li>
                                
                                 <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/goldloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
                                         Gold Loan
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/machineryloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
                                         Machinery Loan
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/insuranceloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
                                         Insurance
                                     </Link>
                                 </li>
                                  <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/educationloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
-                                        Car Loan
+                                        Education Loan
                                     </Link>
                                 </li>
                                
                                 <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/odloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
-                                        Gold Loan
+                                        OD Loan
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/workingcapitalloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
-                                        Machinery Loan
+                                        Working Capital Loan
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/products" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                    <Link to="/creditcardloan" className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                         <ChevronRight size={16} className="mr-2" />
-                                        Insurance
+                                        Credit Card
                                     </Link>
                                 </li>
                             </ul>
                         )}
                     </div> */}
 
+                        {/* Column 3 - Products (Split into 2 sections) */}
                         <div>
                             <h3 className="text-xl font-bold mb-6">Products</h3>
-                            {companyLinks.length > 0 ? (
-                                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
-                                    {companyLinks.map((link, index) => (
-                                        <li key={index}>
-                                            {link}
-                                        </li>
-                                    ))}
-                                </ul>
-                            ) : (
-                                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
-                                    {[
-                                        "Home ",
-                                        "Mortgage",
-                                        "Personal ",
-                                        "Business ",
-                                        "Car ",
-                                         "Education ",
-                                         "OD",
-                                         "Machinery ",
-                                        
-                                        "Gold ",
-                                        "Insurance",
-                                         "working Capital",
-                                       "Credit Card ",
-                                        
-                                    ].map((product, index) => (
-                                        <li key={index}>
-                                            <Link
-                                                to="/products"
-                                                className="flex items-center text-blue-100 hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1"
-                                            >
-                                                <ChevronRight size={16} className="mr-2" />
-                                                {product}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
 
+                            <div className="grid grid-cols-2 gap-4">
+                                {/* Left side - 6 products */}
+                                <ul className="space-y-3">
+                                    <li>
+                                        <Link to="/homeloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Home Loan
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/mortgageloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Mortgage
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/personalloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Personal Loan
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/businessloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Business Loan
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/carloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Car Loan
+                                        </Link>
+                                    </li>
+                                     <li>
+                                        <Link to="/educationloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Education Loan
+                                        </Link>
+                                    </li>
+                                      
+                                </ul>
+
+                                {/* Right side - 6 products */}
+                                <ul className="space-y-3">
+                                      <li>
+                                        <Link to="/odloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> OD Loan
+                                        </Link>
+                                    </li>
+                                    
+                                    <li>
+                                        <Link to="/machineryloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Machinery Loan
+                                        </Link>
+                                    </li>
+                                     <li>
+                                        <Link to="/workingcapitalloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Working Capital Loan
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/goldloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Gold Loan
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/insuranceloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Insurance
+                                        </Link>
+                                    </li>
+                                   
+                                
+                                  
+                                    <li>
+                                        <Link to="/creditcardloan" className="flex items-center text-blue-100 hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Credit Card
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
 
                         <div>
@@ -309,7 +346,7 @@ const Footer = ({ services = [], companyLinks = [] }) => {
             <div className="bg-blue-900 border-t border-blue-800">
                 <div className="max-w-7xl mx-auto px-4 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center text-sm text-blue-200">
-                        <p>Copyright © Fintastick 2025 </p>
+                        <p>Copyright © Fintasktick 2025 </p>
                         <div className="flex gap-6 mt-4 md:mt-0">
                             <Link to="https://www.sunsys.in/" className="hover:text-white">Developed By Sunsys Technologies</Link>
 

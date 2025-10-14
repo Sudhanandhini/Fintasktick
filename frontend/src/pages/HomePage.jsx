@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Clock, Users, TrendingUp, Home, Car, GraduationCap, Building2, Briefcase, Coins, ChevronLeft, DollarSign,Cog, ChevronRight, CreditCard  } from 'lucide-react';
-import heroBg1 from '../assets/14.jpg';
-import heroBg2 from '../assets/2.jpg';
-import heroBg3 from '../assets/3.jpg';
+import { ArrowRight, Shield, Clock, Users, TrendingUp, Home, Car, GraduationCap, Building2, Briefcase, Coins, ChevronLeft, DollarSign, Cog, ChevronRight, CreditCard } from 'lucide-react';
+import heroBg1 from '../assets/download1.jpg';
+import heroBg2 from '../assets/download2.jpg';
+import heroBg3 from '../assets/download3.jpg';
 
 // Counter Component
 const Counter = ({ end, suffix, label, inView, duration = 2000 }) => {
@@ -104,7 +104,7 @@ const HomePage = () => {
 
   // Stats with numeric values for counter
   const stats = [
-    { end: 20, suffix: '+', label: 'Years in Business' },
+    { end: 22, suffix: '+', label: 'Years in Business' },
     { end: 100, suffix: '+ Cr', label: 'Unsecured Loans Disbursed' },
     { end: 500, suffix: '+ Cr', label: 'Secured Loans Disbursed' },
     { end: 2, suffix: '+ Cr', label: 'Insurance' },
@@ -151,82 +151,82 @@ const HomePage = () => {
   ];
 
   const products = [
-   
+
     {
       icon: <Home className="w-8 h-8" />,
       title: 'Home Loan',
       description: 'Competitive interest rates and affordable EMIs for your dream home.',
-      path: '/products'
+      path: '/homeloan'
     },
     {
       icon: <Building2 className="w-8 h-8" />,
       title: 'Mortgage Loan',
       description: 'Leverage your property value to meet diverse financial needs.',
-      path: '/products'
+      path: '/mortgageloan'
     },
-     {
+    {
       icon: <Users className="w-8 h-8" />,
       title: 'Personal Loan',
       description: 'Quick funds for any purpose without collateral or extensive documentation.',
-      path: '/products'
+      path: '/personalloan'
     },
     {
       icon: <Briefcase className="w-8 h-8" />,
       title: 'Business Loan',
       description: 'Fuel your business growth with comprehensive loan solutions.',
-      path: '/products'
+      path: '/businessloan'
     },
     {
       icon: <Car className="w-8 h-8" />,
       title: 'Car Loan',
       description: 'Turn your dream car into reality with attractive rates.',
-      path: '/products'
+      path: '/carloan'
     },
-     {
+    {
       icon: <GraduationCap className="w-8 h-8" />,
       title: 'Education Loan',
       description: 'Invest in your future with education loan benefits.',
-      path: '/products'
+      path: '/educationloan'
     },
     {
       icon: <DollarSign className="w-8 h-8" />,
       title: 'OD Loan',
       description: 'Ensures financial flexibility in emergencies.',
-      path: '/products'
+      path: '/odloan'
     },
-     {
+    {
       icon: <Cog className="w-8 h-8" />,
       title: 'Machinery Loan',
       description: 'Enhance productivity with our Machinery Loan options.',
-      path: '/products'
+      path: '/machineryloan'
     },
 
-     {
+    {
       icon: <TrendingUp className="w-8 h-8" />,
       title: 'Working Capital',
       description: 'Meet recurring expenses and ensure smooth business operations.',
-      path: '/products'
+      path: '/workingcapitalloan'
     },
     {
       icon: <Coins className="w-8 h-8" />,
       title: 'Gold Loan',
       description: 'Unlock the power of your gold with hassle-free loans.',
-      path: '/products'
+      path: '/goldloan'
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: 'Insurance',
       description: 'Protect your life, health, and assets with comprehensive coverage.',
-      path: '/products'
+      path: '/insuranceloan'
     },
     {
-      icon: <CreditCard  className="w-8 h-8" />,
-      title: 'Credit Card Loan',
+      icon: <CreditCard className="w-8 h-8" />,
+      title: 'Credit Card ',
       description: 'Turn your credit card limit into instant cash with a Credit Card Loan.',
-      path: '/products'
+      path: '/creditcardloan'
     },
-    
-    
+
+
   ];
 
   return (
@@ -242,9 +242,8 @@ const HomePage = () => {
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentSlide ? 'opacity-100' : 'opacity-0'
-              }`}
+              className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'
+                }`}
             >
               {/* Background Image */}
               <div
@@ -310,11 +309,10 @@ const HomePage = () => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                currentSlide === index
+              className={`w-3 h-3 rounded-full transition-all ${currentSlide === index
                   ? 'bg-orange-500 w-8'
                   : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-              }`}
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -412,6 +410,18 @@ const HomePage = () => {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{product.title}</h3>
                 <p className="text-gray-600 text-sm mb-4">{product.description}</p>
+                <span className="text-orange-500 font-medium hover:underline inline-flex items-center gap-1">
+                  Learn More
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
               </Link>
             ))}
           </div>
