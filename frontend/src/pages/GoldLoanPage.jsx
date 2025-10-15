@@ -161,7 +161,7 @@ const GoldLoanPage = () => {
               key={idx}
               className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300"
             >
-              <div className="bg-gradient-to-br from-blue-100 to-indigo-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-blue-600">
+              <div className="bg-[#ff6900] w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-800">
@@ -216,7 +216,7 @@ const GoldLoanPage = () => {
           {howToApply.map((item, idx) => (
             <div key={idx} className="relative">
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <div className="bg-gradient-to-br from-blue-500 to-indigo-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="bg-[#ff6900] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {item.step}
                 </div>
                 <h3 className="text-lg font-bold mb-2 text-gray-800">
@@ -237,7 +237,7 @@ const GoldLoanPage = () => {
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
        <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ff6900]">
             Ready to Get Your Gold Loan?
           </h2>
           <p className="text-lg md:text-xl mb-8 text-blue-100">

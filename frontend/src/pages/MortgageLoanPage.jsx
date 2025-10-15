@@ -159,7 +159,7 @@ const MortgageLoanPage = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300">
-              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: '#ff6900' }}>
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-2" style={{ color: '#002c60' }}>{feature.title}</h3>
@@ -199,7 +199,7 @@ const MortgageLoanPage = () => {
           {propertyTypes.map((type, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all text-center border-2" style={{ borderColor: 'rgba(0, 44, 96, 0.1)' }}>
               <Home className="w-8 h-8 mx-auto mb-3" style={{ color: '#002c60' }} />
-              <p className="font-semibold" style={{ color: '#002c60' }}>{type}</p>
+              <p className="font-semibold" style={{ color: '#ff6900' }}>{type}</p>
             </div>
           ))}
         </div>
@@ -214,7 +214,7 @@ const MortgageLoanPage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {loanFeatures.map((feature, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: '#002c60' }} />
+                <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: '#ff6900' }} />
                 <span className="text-gray-700 text-sm">{feature}</span>
               </div>
             ))}
@@ -262,7 +262,7 @@ const MortgageLoanPage = () => {
               { step: "4", title: "Disbursal", desc: "Get funds in your account" }
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: '#ff6900' }}>
                   {item.step}
                 </div>
                 <h3 className="font-bold mb-2" style={{ color: '#002c60' }}>{item.title}</h3>
@@ -276,7 +276,7 @@ const MortgageLoanPage = () => {
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Unlock Your Property's Value?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ff6900]">Ready to Unlock Your Property's Value?</h2>
           <p className="text-lg md:text-xl mb-8 opacity-90">
             Apply now for a mortgage loan and get funds for any purpose
           </p>

@@ -250,7 +250,7 @@ const ProductsPage = () => {
                                         onClick={() => navigate(`${product.path}`)}
                                         className="w-full bg-gradient-to-r from-blue-900 to-blue-700 text-white py-3 rounded font-semibold transition-colors flex items-center justify-center gap-2 hover:from-blue-800 hover:to-blue-600"
                                     >
-                                        Enquire Now <ChevronRight size={18} />
+                                        Read More <ChevronRight size={18} />
                                     </button>
                                 </div>
                             </div>

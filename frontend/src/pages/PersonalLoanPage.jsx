@@ -131,7 +131,7 @@ const PersonalLoanPage = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300">
-              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: '#ff6900' }}>
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-2" style={{ color: '#002c60' }}>{feature.title}</h3>
@@ -154,7 +154,7 @@ const PersonalLoanPage = () => {
             {useCases.map((useCase, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all text-center">
                 <div className="text-4xl mb-3">{useCase.icon}</div>
-                <h3 className="text-lg font-bold mb-2" style={{ color: '#002c60' }}>{useCase.title}</h3>
+                <h3 className="text-lg font-bold mb-2" style={{ color: '#ff6900' }}>{useCase.title}</h3>
                 <p className="text-gray-600 text-sm">{useCase.desc}</p>
               </div>
             ))}
@@ -202,7 +202,7 @@ const PersonalLoanPage = () => {
               { step: "4", title: "Receive Funds", desc: "Money in your account" }
             ].map((item, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: '#ff6900' }}>
                   {item.step}
                 </div>
                 <h3 className="font-bold mb-2" style={{ color: '#002c60' }}>{item.title}</h3>
@@ -216,7 +216,7 @@ const PersonalLoanPage = () => {
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Funds Urgently?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ff6900]">Need Funds Urgently?</h2>
           <p className="text-lg md:text-xl mb-8 opacity-90">
             Apply now and get instant approval. Money in your account within 48 hours!
           </p>

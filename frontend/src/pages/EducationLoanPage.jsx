@@ -169,7 +169,7 @@ const EducationLoanPage = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300">
-              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: '#ff6900' }}>
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-2" style={{ color: '#002c60' }}>{feature.title}</h3>
@@ -216,7 +216,7 @@ const EducationLoanPage = () => {
           {coverageItems.map((item, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all text-center">
               <div className="text-4xl mb-3">{item.icon}</div>
-              <h3 className="text-lg font-bold mb-2" style={{ color: '#002c60' }}>{item.title}</h3>
+              <h3 className="text-lg font-bold mb-2" style={{ color: '#ff6900' }}>{item.title}</h3>
               <p className="text-gray-600 text-sm">{item.desc}</p>
             </div>
           ))}
@@ -232,7 +232,7 @@ const EducationLoanPage = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {popularDestinations.map((dest, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all text-center">
-                <h3 className="text-2xl font-bold mb-2">{dest.country}</h3>
+                <h3 className="text-2xl font-bold mb-2 text-[#ff6900]">{dest.country}</h3>
                 <p className="text-gray-600">{dest.programs}</p>
               </div>
             ))}
@@ -248,7 +248,7 @@ const EducationLoanPage = () => {
         <div className="grid md:grid-cols-4 gap-4">
           {courses.map((course, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all text-center border-2" style={{ borderColor: 'rgba(0, 44, 96, 0.1)' }}>
-              <CheckCircle className="w-8 h-8 mx-auto mb-3" style={{ color: '#002c60' }} />
+              <CheckCircle className="w-8 h-8 mx-auto mb-3" style={{ color: '#ff6900' }} />
               <p className="font-semibold" style={{ color: '#002c60' }}>{course}</p>
             </div>
           ))}
@@ -300,7 +300,7 @@ const EducationLoanPage = () => {
             { title: "Parent as Co-borrower", desc: "Parent/Guardian can be co-applicant" }
           ].map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
-              <h3 className="text-lg font-bold mb-2" style={{ color: '#002c60' }}>{feature.title}</h3>
+              <h3 className="text-lg font-bold mb-2" style={{ color: '#ff6900' }}>{feature.title}</h3>
               <p className="text-gray-600 text-sm">{feature.desc}</p>
             </div>
           ))}
@@ -319,7 +319,7 @@ const EducationLoanPage = () => {
               { step: "4", title: "Disbursal", desc: "Funds sent to institution" }
             ].map((item, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: '#ff6900' }}>
                   {item.step}
                 </div>
                 <h3 className="font-bold mb-2" style={{ color: '#002c60' }}>{item.title}</h3>
@@ -333,7 +333,7 @@ const EducationLoanPage = () => {
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Pursue Your Dreams?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ff6900]">Ready to Pursue Your Dreams?</h2>
           <p className="text-lg md:text-xl mb-8 opacity-90">
             Apply now and take the first step towards your educational journey
           </p>

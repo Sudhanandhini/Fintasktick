@@ -160,7 +160,7 @@ const HomeLoanPage = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300">
-              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: '#ff6900' }}>
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-2" style={{ color: '#002c60' }}>{feature.title}</h3>
@@ -179,7 +179,7 @@ const HomeLoanPage = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {loanTypes.map((type, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
-                <h3 className="text-xl font-bold mb-2" style={{ color: '#002c60' }}>{type.title}</h3>
+                <h3 className="text-xl font-bold mb-2" style={{ color: '#ff6900' }}>{type.title}</h3>
                 <p className="text-gray-600">{type.desc}</p>
               </div>
             ))}
@@ -218,7 +218,7 @@ const HomeLoanPage = () => {
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Buy Your Dream Home?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ff6900]">Ready to Buy Your Dream Home?</h2>
           <p className="text-lg md:text-xl mb-8 opacity-90">
             Get pre-approved in minutes and start your home buying journey
           </p>

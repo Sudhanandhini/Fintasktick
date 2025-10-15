@@ -203,7 +203,7 @@ const CreditCardLoanPage = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300">
-              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: '#ff6900' }}>
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-2" style={{ color: '#002c60' }}>{feature.title}</h3>
@@ -252,7 +252,7 @@ const CreditCardLoanPage = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {loanFacilities.map((facility, idx) => (
             <div key={idx} className="bg-white p-8 rounded-2xl shadow-xl">
-              <h3 className="text-2xl font-bold mb-3" style={{ color: '#002c60' }}>{facility.title}</h3>
+              <h3 className="text-2xl font-bold mb-3" style={{ color: '#ff6900' }}>{facility.title}</h3>
               <p className="text-gray-600 mb-6">{facility.desc}</p>
               <ul className="space-y-3">
                 {facility.features.map((feature, i) => (
@@ -276,7 +276,7 @@ const CreditCardLoanPage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: '#002c60' }} />
+                <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: '#ff6900' }} />
                 <span className="text-gray-700 text-sm">{benefit}</span>
               </div>
             ))}
@@ -290,7 +290,7 @@ const CreditCardLoanPage = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {securityFeatures.map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all text-center">
-              <Shield className="w-12 h-12 mx-auto mb-4" style={{ color: '#002c60' }} />
+              <Shield className="w-12 h-12 mx-auto mb-4" style={{ color: '#ff6900' }} />
               <p className="font-semibold text-gray-800">{feature}</p>
             </div>
           ))}
@@ -305,7 +305,7 @@ const CreditCardLoanPage = () => {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+                  <tr style={{ background: '#ff6900' }}>
                     <th className="px-6 py-4 text-left text-white">Feature</th>
                     <th className="px-6 py-4 text-left text-white">Amount</th>
                     <th className="px-6 py-4 text-left text-white">Note</th>
@@ -366,7 +366,7 @@ const CreditCardLoanPage = () => {
               { step: "4", title: "Get Approved", desc: "Receive card in 5-7 days" }
             ].map((item, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: '#ff6900' }}>
                   {item.step}
                 </div>
                 <h3 className="font-bold mb-2" style={{ color: '#002c60' }}>{item.title}</h3>
@@ -380,8 +380,8 @@ const CreditCardLoanPage = () => {
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Your Credit Card?</h2>
-          <p className="text-lg md:text-xl mb-8 opacity-90">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ff6900]">Ready to Get Your Credit Card?</h2>
+          <p className="text-lg md:text-xl mb-8 opacity-90 ">
             Apply now and enjoy exclusive rewards, cashback, and benefits
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
