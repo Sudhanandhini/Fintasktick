@@ -33,7 +33,7 @@ const HomeLoanPage = () => {
     { 
       icon: <TrendingUp className="w-6 h-6" />, 
       title: "Low Interest Rates", 
-      desc: "Starting from 6.5% per annum" 
+      desc: "Starting from 7.35% per annum" 
     },
     { 
       icon: <Shield className="w-6 h-6" />, 
@@ -51,7 +51,7 @@ const HomeLoanPage = () => {
 
   const documents = [
     "Identity & Address Proof (Aadhaar, PAN, Passport, Etc)",
-    "Income proof (Salary slips, ITR)",
+    "Income proof (Salary slips, ITR, Bank statements)",
     "Property documents (Katha, Sale deed and Other documents)",
     "Passport size photographs"
   ];
@@ -59,9 +59,10 @@ const HomeLoanPage = () => {
   const loanTypes = [
     { title: "Home Purchase Loan", desc: "For buying ready-to-move-in properties" },
     { title: "Home Construction Loan", desc: "For constructing your dream home" },
-    { title: "Home Improvement Loan", desc: "For renovating your existing home" },
-    { title: "Plot Loan (Residential, Commercial, Industrial)", desc: "For purchasing residential, commercial, and industrial plots" },
-    { title: "Home Loan Composite", desc: "For purchasing land and constructing house" }
+    { title: "Home Loan Composite", desc: "For purchasing land and constructing house" },
+       { title: "Plot Loan (Residential, Commercial, Industrial)", desc: "For purchasing residential, commercial, and industrial plots" },
+     { title: "Home Improvement Loan", desc: "For renovating your existing home" }
+    
   ];
 
   return (

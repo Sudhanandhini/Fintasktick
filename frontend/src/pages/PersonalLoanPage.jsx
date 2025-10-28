@@ -8,7 +8,7 @@ const PersonalLoanPage = () => {
     { 
       icon: <Zap className="w-6 h-6" />, 
       title: "Quick Disbursal", 
-      desc: "Get funds in 24-48 hours" 
+      desc: "Get funds in 24-72 hours" 
     },
     { 
       icon: <Shield className="w-6 h-6" />, 
@@ -18,7 +18,7 @@ const PersonalLoanPage = () => {
     { 
       icon: <DollarSign className="w-6 h-6" />, 
       title: "Flexible Amount", 
-      desc: "Borrow ₹50K to ₹40 Lakhs" 
+      desc: "Borrow ₹1 Lakhs to ₹70 Lakhs" 
     },
     { 
       icon: <Clock className="w-6 h-6" />, 
@@ -38,8 +38,8 @@ const PersonalLoanPage = () => {
 
   const eligibility = [
     "Age: 21-60 years",
-    "Employment: Salaried or Self-employed",
-    "Minimum Monthly Income: ₹15,000",
+    "Employment: Salaried ",
+    "Minimum Monthly Income: ₹20,000",
     "Work Experience: Minimum 1 year",
     "Credit Score: 700+ preferred"
   ];
@@ -47,7 +47,7 @@ const PersonalLoanPage = () => {
   const documents = [
     "Identity Proof (Aadhaar/PAN/Passport/Driving License)",
     "Address Proof (Utility bills/Rent agreement)",
-    "Income Proof (Salary slips/Bank statements/ITR)",
+    "Income Proof (Salary slips/Bank statements)",
     "Employment Proof (Offer letter/Appointment letter)"
   ];
 
@@ -111,9 +111,9 @@ const PersonalLoanPage = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: "Interest Rate", value: "10.5% p.a." },
-            { label: "Max Loan", value: "₹40 Lakhs" },
-            { label: "Tenure", value: "Up to 5 years" },
-            { label: "Disbursal", value: "24-48 hours" }
+            { label: "Max Loan", value: "₹40 to ₹70 Lakhs" },
+            { label: "Tenure", value: "Up to 7 years" },
+            { label: "Disbursal", value: "24-72 hours" }
           ].map((stat, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg text-center">
               <p className="text-3xl font-bold mb-2" style={{ color: '#002c60' }}>{stat.value}</p>

@@ -31,7 +31,7 @@ const MortgageLoanPage = () => {
     { icon: "🏠", title: "Property Purchase", desc: "Buy new residential/commercial property" },
     { icon: "🔨", title: "Home Renovation", desc: "Upgrade or expand your property" },
     { icon: "💼", title: "Business Expansion", desc: "Grow your business ventures" },
-    { icon: "🌾", title: "Agriculture Land", desc: "Start farming" },
+    { icon: "🌾", title: "Agriculture Land Purchase", desc: "Start farming" },
     { icon: "🎓", title: "Education", desc: "Fund higher education" },
     { icon: "🏥", title: "Medical Emergency", desc: "Cover healthcare costs" }
   ];
@@ -53,9 +53,9 @@ const MortgageLoanPage = () => {
 
   const documents = [
     "Property documents (Title deed, Sale deed, Approved plan)",
-    "Identity & Address proof (Aadhaar/PAN/Passport)",
-    "Income proof (Salary slips/ITR/Bank statements)",
-    "Property valuation report",
+    "Identity & Address proof (Aadhaar/PAN/Passport/etc)",
+    "Income proof (Salary slips/ITR)",
+  
     "Bank statements for last 6 months",
     "Passport size photographs"
   ];
@@ -139,7 +139,7 @@ const MortgageLoanPage = () => {
             { label: "Interest Rate", value: "Starts from 8.9% P.A." },
             { label: "Max Loan", value: "Upto ₹100 Crores" },
             { label: "Tenure", value: "Upto 20 years" },
-            { label: "Based on type of property", value: "Upto 70% LTV" }
+            { label: "Based on type of property", value: "Upto 80% LTV" }
           ].map((stat, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg text-center">
               <p className="text-3xl font-bold mb-2" style={{ color: '#002c60' }}>{stat.value}</p>
@@ -193,7 +193,7 @@ const MortgageLoanPage = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#002c60' }}>
           Eligible Property Types
         </h2>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {propertyTypes.map((type, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all text-center border-2" style={{ borderColor: 'rgba(0, 44, 96, 0.1)' }}>
               <Home className="w-8 h-8 mx-auto mb-3" style={{ color: '#002c60' }} />
