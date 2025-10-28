@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Clock, Users, TrendingUp, Home, Car, GraduationCap, Building2, Briefcase, Coins, ChevronLeft, DollarSign, Cog, ChevronRight, CreditCard } from 'lucide-react';
-import heroBg1 from '../assets/download1.jpg';
-import heroBg2 from '../assets/download2.jpg';
-import heroBg3 from '../assets/download3.jpg';
+import heroBg1 from '../assets/banner1.webp';
+import heroBg2 from '../assets/banner2.webp';
+import heroBg3 from '../assets/banner3.webp';
 
 // Counter Component
 const Counter = ({ end, suffix, label, inView, duration = 2000 }) => {
@@ -238,7 +238,7 @@ const HomePage = () => {
         onMouseLeave={() => setIsPaused(false)}
       >
         {/* Slides Container */}
-        <div className="relative h-[500px] md:h-[600px]">
+        <div className="relative h-[155px] sm:h-[400px] md:h-[600px] lg:h-[700px]">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -258,7 +258,7 @@ const HomePage = () => {
               <div className="absolute inset-0 flex items-center">
                 <div className="max-w-7xl mx-auto px-4 w-full">
                   <div className="max-w-3xl">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                    {/* <h1 className="text-4xl md:text-5xl font-bold mb-6">
                       {slide.title}
                     </h1>
                     <p className="text-xl mb-8 text-white">
@@ -277,7 +277,7 @@ const HomePage = () => {
                       >
                         {slide.secondaryBtn.text}
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
