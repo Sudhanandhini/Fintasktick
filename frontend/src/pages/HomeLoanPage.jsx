@@ -22,8 +22,8 @@ const HomeLoanPage = () => {
   const features = [
     { 
       icon: <Home className="w-6 h-6" />, 
-      title: "Up to 90% Funding", 
-      desc: "Finance up to 90% of property value" 
+      title: "Up to 80% Funding", 
+      desc: "Finance up to 80% of property value" 
     },
     { 
       icon: <Clock className="w-6 h-6" />, 
@@ -38,21 +38,21 @@ const HomeLoanPage = () => {
     { 
       icon: <Shield className="w-6 h-6" />, 
       title: "Tax Benefits", 
-      desc: "Save up to ₹3.5 lakhs annually" 
+      desc: "" 
     }
   ];
 
   const eligibility = [
-    "Age: 18-65 years for salaried, 21-70 years for self-employed",
+    "Age: 21-65 years for salaried, 21-70 years for self-employed",
     "Minimum income: ₹25,000 per month for salaried",
-    "Credit score: 750 or above preferred",
+    "Credit score: should be 700+ and varies case to case",
     "Employment: Min 2 years experience (salaried) or 3 years in business"
   ];
 
   const documents = [
-    "Identity & Address Proof (Aadhaar, PAN, Passport)",
-    "Income proof (Salary slips, ITR, Bank statements)",
-    "Property documents (Sale deed, agreement)",
+    "Identity & Address Proof (Aadhaar, PAN, Passport, Etc)",
+    "Income proof (Salary slips, ITR)",
+    "Property documents (Katha, Sale deed and Other documents)",
     "Passport size photographs"
   ];
 
@@ -60,7 +60,8 @@ const HomeLoanPage = () => {
     { title: "Home Purchase Loan", desc: "For buying ready-to-move-in properties" },
     { title: "Home Construction Loan", desc: "For constructing your dream home" },
     { title: "Home Improvement Loan", desc: "For renovating your existing home" },
-    { title: "Plot Loan", desc: "For purchasing residential plots" }
+    { title: "Plot Loan (Residential, Commercial, Industrial)", desc: "For purchasing residential, commercial, and industrial plots" },
+    { title: "Home Loan Composite", desc: "For purchasing land and constructing house" }
   ];
 
   return (
@@ -139,10 +140,10 @@ const HomeLoanPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: "Interest Rate", value: "6.5% p.a." },
-            { label: "Max Loan", value: "₹10 Crores" },
+            { label: "Interest Rate", value: "7.35% P.A." },
+            { label: "Max Loan", value: "₹20 Crores" },
             { label: "Tenure", value: "Up to 30 years" },
-            { label: "Processing", value: "0.5% + GST" }
+            { label: "Processing", value: "Starts from 0.2% + GST" }
           ].map((stat, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg text-center">
               <p className="text-3xl font-bold mb-2" style={{ color: '#002c60' }}>{stat.value}</p>
@@ -220,7 +221,7 @@ const HomeLoanPage = () => {
         <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ff6900]">Ready to Buy Your Dream Home?</h2>
           <p className="text-lg md:text-xl mb-8 opacity-90">
-            Get pre-approved in minutes and start your home buying journey
+            Start your home buying journey
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/contact" className="bg-white px-10 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg inline-flex items-center justify-center gap-2" style={{ color: '#002c60' }}>

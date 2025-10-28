@@ -26,9 +26,9 @@ const Footer = ({ services = [], companyLinks = [] }) => {
             {/* Main Footer Content */}
             <div className="bg-[#dfe1e3]">
                 <div className="   max-w-7xl mx-auto px-4 py-16">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className="container mx-auto flex flex-col md:flex-row flex-wrap justify-center md:justify-between items-start gap-8">
                         {/* Column 1 - Logo & Description */}
-                        <div>
+                        <div className="max-w-xs">
                             {/* Logo */}
                             <div className="flex items-center gap-2 mb-6">
                                 {/* <div className="relative">
@@ -189,7 +189,7 @@ const Footer = ({ services = [], companyLinks = [] }) => {
 
                         {/* Column 3 - Products (Split into 2 sections) */}
                         <div>
-                            <h3 className="text-xl font-bold mb-6">Products</h3>
+                            <h3 className="text-xl font-bold mb-6 text-center">Products</h3>
 
                             <div className="grid grid-cols-2 gap-4">
                                 {/* Left side - 6 products */}
@@ -201,7 +201,7 @@ const Footer = ({ services = [], companyLinks = [] }) => {
                                     </li>
                                     <li>
                                         <Link to="/mortgageloan" className="flex items-center text-black hover:text-orange-500 transition-all hover:translate-x-1">
-                                            <ChevronRight size={16} className="mr-2" /> Mortgage
+                                            <ChevronRight size={16} className="mr-2" /> Mortgage Loan
                                         </Link>
                                     </li>
                                     <li>
@@ -231,7 +231,7 @@ const Footer = ({ services = [], companyLinks = [] }) => {
                                 <ul className="space-y-3">
                                       <li>
                                         <Link to="/odloan" className="flex items-center text-black hover:text-orange-500 transition-all hover:translate-x-1">
-                                            <ChevronRight size={16} className="mr-2" /> OD Loan
+                                            <ChevronRight size={16} className="mr-2" /> OD and DOD
                                         </Link>
                                     </li>
                                     
@@ -242,7 +242,7 @@ const Footer = ({ services = [], companyLinks = [] }) => {
                                     </li>
                                      <li>
                                         <Link to="/workingcapitalloan" className="flex items-center text-black hover:text-orange-500 transition-all hover:translate-x-1">
-                                            <ChevronRight size={16} className="mr-2" /> Working Capital Loan
+                                            <ChevronRight size={16} className="mr-2" /> Working Capital
                                         </Link>
                                     </li>
                                     <li>
@@ -270,7 +270,7 @@ const Footer = ({ services = [], companyLinks = [] }) => {
 
                         <div>
                             <div>
-                                <h3 className="text-xl font-bold mb-6">Services</h3>
+                                <h3 className="text-xl font-bold mb-6">Other Services</h3>
                                 {companyLinks.length > 0 ? (
                                     <ul className="space-y-3">
                                         {companyLinks.map((link, index) => (
@@ -292,6 +292,23 @@ const Footer = ({ services = [], companyLinks = [] }) => {
                                                 <ChevronRight size={16} className="mr-2" />
                                                 Property Legal Solutions
 
+                                            </Link>
+                                        </li>
+                                             <li>
+                                        <Link to="/insuranceloan" className="flex items-center text-black hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Insurance
+                                        </Link>
+                                    </li>
+                                      <li>
+                                            <Link to="/accounttaxation" className="flex items-center text-black hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                                <ChevronRight size={16} className="mr-2" />
+                                                Account and Taxation 
+                                            </Link>
+                                        </li>
+                                           <li>
+                                            <Link to="/planning" className="flex items-center text-black hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                                <ChevronRight size={16} className="mr-2" />
+                                                Plan and Estimation 
                                             </Link>
                                         </li>
 

@@ -1,19 +1,19 @@
 // src/pages/products/MortgageLoanPage.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, FileText, Building2, Phone, ArrowLeft, Home, DollarSign, Shield, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle, FileText, Building2, Phone, ArrowLeft, Home, IndianRupee, Shield, TrendingUp } from 'lucide-react';
 
 const MortgageLoanPage = () => {
   const features = [
     { 
-      icon: <DollarSign className="w-6 h-6" />, 
+      icon: <IndianRupee className="w-6 h-6" />, 
       title: "High Loan Amount", 
-      desc: "Get up to ₹5 Crores against property" 
+      desc: "Get up to ₹100 Crores against property" 
     },
     { 
       icon: <TrendingUp className="w-6 h-6" />, 
       title: "Low Interest Rates", 
-      desc: "Competitive rates from 8% p.a." 
+      desc: "Competitive rates from 8.9% P.A." 
     },
     { 
       icon: <Shield className="w-6 h-6" />, 
@@ -23,7 +23,7 @@ const MortgageLoanPage = () => {
     { 
       icon: <Building2 className="w-6 h-6" />, 
       title: "Long Tenure", 
-      desc: "Repay over 15 years" 
+      desc: "Repay over 20 years" 
     }
   ];
 
@@ -31,17 +31,15 @@ const MortgageLoanPage = () => {
     { icon: "🏠", title: "Property Purchase", desc: "Buy new residential/commercial property" },
     { icon: "🔨", title: "Home Renovation", desc: "Upgrade or expand your property" },
     { icon: "💼", title: "Business Expansion", desc: "Grow your business ventures" },
-    { icon: "💍", title: "Wedding Expenses", desc: "Plan a grand celebration" },
+    { icon: "🌾", title: "Agriculture Land", desc: "Start farming" },
     { icon: "🎓", title: "Education", desc: "Fund higher education" },
     { icon: "🏥", title: "Medical Emergency", desc: "Cover healthcare costs" }
   ];
 
   const propertyTypes = [
-    "Residential House/Flat",
-    "Commercial Property",
-    "Industrial Property",
-    "Residential Plot",
-    "Commercial Plot",
+    "Residential Property/Plot",
+    "Commercial Property/Plot",
+    "Industrial Property/Plot",
     "Mixed-use Property"
   ];
 
@@ -63,7 +61,7 @@ const MortgageLoanPage = () => {
   ];
 
   const loanFeatures = [
-    "Up to 70% of property value",
+    "Up to 100% of property value (80% Secured, 20% Unsecured)", 
     "Flexible repayment options",
     "Part payment facility available",
     "No end-use restrictions",
@@ -138,10 +136,10 @@ const MortgageLoanPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: "Interest Rate", value: "8% p.a." },
-            { label: "Max Loan", value: "₹5 Crores" },
-            { label: "Tenure", value: "Up to 15 years" },
-            { label: "LTV", value: "Up to 70%" }
+            { label: "Interest Rate", value: "Starts from 8.9% P.A." },
+            { label: "Max Loan", value: "Upto ₹100 Crores" },
+            { label: "Tenure", value: "Upto 20 years" },
+            { label: "Based on type of property", value: "Upto 70% LTV" }
           ].map((stat, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg text-center">
               <p className="text-3xl font-bold mb-2" style={{ color: '#002c60' }}>{stat.value}</p>
@@ -211,7 +209,7 @@ const MortgageLoanPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#002c60' }}>
             Key Features & Benefits
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 ">
             {loanFeatures.map((feature, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: '#ff6900' }} />
