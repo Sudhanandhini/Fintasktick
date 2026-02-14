@@ -38,7 +38,7 @@ const PersonalLoanPage = () => {
 
   const eligibility = [
     "Age: 21-60 years",
-    "Employment: Salaried ",
+    "Employment: Salaried or Self-employed",
     "Minimum Monthly Income: ₹20,000",
     "Work Experience: Minimum 1 year",
     "Credit Score: 700+ preferred"

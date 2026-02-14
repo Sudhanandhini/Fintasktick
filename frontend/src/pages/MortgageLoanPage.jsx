@@ -52,12 +52,11 @@ const MortgageLoanPage = () => {
   ];
 
   const documents = [
-    "Property documents (Title deed, Sale deed, Approved plan)",
     "Identity & Address proof (Aadhaar/PAN/Passport/etc)",
-    "Income proof (Salary slips/ITR)",
-  
+    "Income proof (Salary slips/ITR/Bank statements)",
     "Bank statements for last 6 months",
-    "Passport size photographs"
+    "Passport size photographs",
+    "Property documents (Title deed, Sale deed, Approved plan, Katha)",
   ];
 
   const loanFeatures = [

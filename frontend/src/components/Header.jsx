@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Twitter, Facebook, Linkedin, Rss, ChevronDown, Menu, X } from 'lucide-react';
+import { MapPin, Phone, Instagram, Facebook, Linkedin, Rss, ChevronDown, Menu, X } from 'lucide-react';
 import logo from '../assets/logo-full.png'
 
 const Header = () => {
@@ -41,17 +41,17 @@ const Header = () => {
           {/* Right Side - Social Icons */}
           <div className="flex items-center gap-3">
             <a href="#" className="hover:text-orange-500 transition-colors">
-              <Twitter size={16} />
+              <Instagram size={16} />
             </a>
-            <a href="#" className="hover:text-orange-500 transition-colors">
+            <a href="https://www.facebook.com/share/1Bsnyx2PuY/?mibextid=wwXIfr" className="hover:text-orange-500 transition-colors">
               <Facebook size={16} />
             </a>
             <a href="#" className="hover:text-orange-500 transition-colors">
               <Linkedin size={16} />
             </a>
-            <a href="#" className="hover:text-orange-500 transition-colors">
+            {/* <a href="#" className="hover:text-orange-500 transition-colors">
               <Rss size={16} />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

@@ -190,7 +190,7 @@ const AboutPage = () => {
                 <h3 className="text-2xl font-bold text-gray-900">Our Mission</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Empowering Financial Growth - Disbursing INR 5000 Crore in Loans within the Next 10 Years. At our company, we are driven by a bold and ambitious mission to transform lives by making a substantial impact on individuals, businesses, and communities we serve through accessible and efficient financial solutions.
+                Empowering Financial Growth - Disbursing INR 5000 Crore in Loans within the Next 5 Years. At our company, we are driven by a bold and ambitious mission to transform lives by making a substantial impact on individuals, businesses, and communities we serve through accessible and efficient financial solutions.
               </p>
             </div>
           </div>

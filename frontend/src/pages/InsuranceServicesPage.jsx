@@ -87,9 +87,9 @@ const InsuranceServicesPage = () => {
     "Policy documentation",
     "Renewal reminders",
     "Claims assistance",
-    "Policy modification support",
+  
     "Free consultation",
-    "24/7 customer support"
+   
   ];
 
   const claimsProcess = [
@@ -167,12 +167,12 @@ const InsuranceServicesPage = () => {
 
       {/* Key Stats */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {[
-            { label: "Insurance Partners", value: "15+" },
-            { label: "Policies Issued", value: "2000+" },
-            { label: "Claims Settled", value: "₹2Cr+" },
-            { label: "Happy Clients", value: "1500+" }
+            { label: "Insurance Partners", value: "9+" },
+            { label: "Policies Issued", value: "200+" },
+           
+            { label: "Happy Clients", value: "100+" }
           ].map((stat, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg text-center">
               <p className="text-3xl font-bold mb-2" style={{ color: '#002c60' }}>{stat.value}</p>
@@ -279,7 +279,7 @@ const InsuranceServicesPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#002c60' }}>
             Our Services
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: '#ff6900' }} />

@@ -30,10 +30,10 @@ const HomeLoanPage = () => {
       title: "Long Tenure", 
       desc: "Repay over 30 years" 
     },
-    { 
-      icon: <TrendingUp className="w-6 h-6" />, 
-      title: "Low Interest Rates", 
-      desc: "Starting from 7.35% per annum" 
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Low Interest Rates",
+      desc: "Starting from 7.1% per annum"
     },
     { 
       icon: <Shield className="w-6 h-6" />, 
@@ -52,17 +52,17 @@ const HomeLoanPage = () => {
   const documents = [
     "Identity & Address Proof (Aadhaar, PAN, Passport, Etc)",
     "Income proof (Salary slips, ITR, Bank statements)",
+    "Passport size photographs",
     "Property documents (Katha, Sale deed and Other documents)",
-    "Passport size photographs"
   ];
 
   const loanTypes = [
     { title: "Home Purchase Loan", desc: "For buying ready-to-move-in properties" },
     { title: "Home Construction Loan", desc: "For constructing your dream home" },
+    { title: "Home Improvement Loan", desc: "For renovating your existing home" },
+    { title: "Plot Loan (Residential, Commercial, Industrial)", desc: "For purchasing residential, commercial, and industrial plots" },
     { title: "Home Loan Composite", desc: "For purchasing land and constructing house" },
-       { title: "Plot Loan (Residential, Commercial, Industrial)", desc: "For purchasing residential, commercial, and industrial plots" },
-     { title: "Home Improvement Loan", desc: "For renovating your existing home" }
-    
+    { title: "Home Loan Refinance", desc: "Refinance your home loan for better rates and manageable EMIs." },
   ];
 
   return (
@@ -141,10 +141,10 @@ const HomeLoanPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: "Interest Rate", value: "7.35% P.A." },
+            { label: "Interest Rate", value: "7.1% P.A." },
             { label: "Max Loan", value: "₹20 Crores" },
             { label: "Tenure", value: "Up to 30 years" },
-            { label: "Processing", value: "Starts from 0.2% + GST" }
+            { label: "Processing Fees", value: "Starts from 10k + GST" }
           ].map((stat, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg text-center">
               <p className="text-3xl font-bold mb-2" style={{ color: '#002c60' }}>{stat.value}</p>

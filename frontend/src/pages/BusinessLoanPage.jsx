@@ -58,18 +58,18 @@ const BusinessLoanPage = () => {
     "PAN and Aadhaar of proprietors/partners/directors",
     "ITR and audited financials for last 2 years",
     "Bank statements for last 12 months",
-    "Business proof (GST registration, Shop Act license)"
+    "Business proof (GST registration, MSME, Pharmacy)",
   ];
 
   const loanFeatures = [
     "Up to ₹75 lakhs loan amount",
-    "Flexible repayment tenure up to 7 years",
-    "Part payment facility available",
+    "Flexible repayment tenure up to 3 years",
+    
     "No end-use restrictions",
     "Quick processing and disbursal",
     "Minimal documentation",
     "Doorstep service available",
-    "Balance transfer facility"
+   
   ];
 
   return (
@@ -207,7 +207,7 @@ const BusinessLoanPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#002c60' }}>
             Key Features & Benefits
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {loanFeatures.map((feature, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: '#ff6900' }} />

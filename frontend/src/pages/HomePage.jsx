@@ -379,7 +379,7 @@ const HomePage = () => {
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-700 leading-relaxed">
-                Empowering Financial Growth - Disbursing INR 5000 Crore in Loans within the Next 10 Years. We are driven by a bold and ambitious mission to transform lives.
+                Empowering Financial Growth - Disbursing INR 5000 Crore in Loans within the Next 5 Years. We are driven by a bold and ambitious mission to transform lives.
               </p>
             </div>
           </div>

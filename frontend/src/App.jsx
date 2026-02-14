@@ -19,10 +19,15 @@ import InsuranceServicesPage from './pages/InsuranceServicesPage';
 import CreditCardLoanPage from './pages/CreditCardLoanPage';
 import WorkingCapitalLoanPage from './pages/WorkingCapitalLoanPage';
 
+import ScrollToTop from './components/Scrolltotop';
+
 
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
+
+  <ScrollToTop />
+
       <Header />
       <main className="flex-grow">
         <Routes>

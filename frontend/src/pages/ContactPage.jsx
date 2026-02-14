@@ -360,7 +360,7 @@ const ContactPage = () => {
                 How long does the loan approval process take?
               </h3>
               <p className="text-gray-600">
-                Typically, loan approval takes 24-48 hours after submitting all required documents.
+                Typically, loan approval takes 3-4 days for personal loan and 7-10 days for home loan after submitting all required documents.
               </p>
             </div>
 
