@@ -54,13 +54,13 @@ const PersonalLoanPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-slate-50">
       {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <Link to="/products" className="inline-flex items-center gap-2 font-medium hover:opacity-80 transition-opacity" style={{ color: '#002c60' }}>
+        <Link to="/products" className="inline-flex items-center gap-2 font-medium hover:opacity-80 transition-opacity" style={{ color: '#003a77' }}>
           <ArrowLeft className="w-5 h-5" /> Back to Products
         </Link>
       </div> */}
 
       {/* Hero Section */}
-      <div className="text-white py-20" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+      <div className="text-white py-20" style={{ background: 'linear-gradient(135deg, #003a77 0%, #004080 100%)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -72,7 +72,7 @@ const PersonalLoanPage = () => {
                 Quick funds for any purpose - weddings, vacations, medical emergencies, or business expansion. No collateral required!
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/contact" className="bg-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" style={{ color: '#002c60' }}>
+                <Link to="/contact" className="bg-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" style={{ color: '#003a77' }}>
                   Apply Now
                 </Link>
                 {/* <button className="border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all">
@@ -110,31 +110,37 @@ const PersonalLoanPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: "Interest Rate", value: "10.5% p.a." },
+            { label: "Interest Rate Starts from", value: "10.5% p.a." },
             { label: "Max Loan", value: "₹40 to ₹70 Lakhs" },
             { label: "Tenure", value: "Up to 7 years" },
             { label: "Disbursal", value: "24-72 hours" }
           ].map((stat, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg text-center">
-              <p className="text-3xl font-bold mb-2" style={{ color: '#002c60' }}>{stat.value}</p>
+              <p className="text-3xl font-bold mb-2" style={{ color: '#003a77' }}>{stat.value}</p>
               <p className="text-gray-600 text-sm">{stat.label}</p>
             </div>
           ))}
         </div>
       </div>
 
+        {/* ROI Disclaimer */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-3 mb-2 ">
+        <p className="text-sm text-gray-500 italic text-center">*ROI will Be based On Customer's Credit rating and Bankers Decision</p>
+      </div>
+
+
       {/* Features Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#002c60' }}>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#003a77' }}>
           Why Choose Our Personal Loan?
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300">
-              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: '#ff6900' }}>
+              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: '#f97316' }}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold mb-2" style={{ color: '#002c60' }}>{feature.title}</h3>
+              <h3 className="text-xl font-bold mb-2" style={{ color: '#003a77' }}>{feature.title}</h3>
               <p className="text-gray-600">{feature.desc}</p>
             </div>
           ))}
@@ -144,7 +150,7 @@ const PersonalLoanPage = () => {
       {/* Use Cases */}
       <div className="py-16" style={{ background: 'linear-gradient(to right, rgba(0, 44, 96, 0.05), rgba(0, 64, 128, 0.05))' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ color: '#002c60' }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ color: '#003a77' }}>
             What Can You Use It For?
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -154,7 +160,7 @@ const PersonalLoanPage = () => {
             {useCases.map((useCase, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all text-center">
                 <div className="text-4xl mb-3">{useCase.icon}</div>
-                <h3 className="text-lg font-bold mb-2" style={{ color: '#ff6900' }}>{useCase.title}</h3>
+                <h3 className="text-lg font-bold mb-2" style={{ color: '#f97316' }}>{useCase.title}</h3>
                 <p className="text-gray-600 text-sm">{useCase.desc}</p>
               </div>
             ))}
@@ -166,7 +172,7 @@ const PersonalLoanPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           <div className="bg-white p-8 rounded-2xl shadow-xl">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#002c60' }}>Eligibility Criteria</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#003a77' }}>Eligibility Criteria</h3>
             <ul className="space-y-4">
               {eligibility.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
@@ -177,11 +183,11 @@ const PersonalLoanPage = () => {
             </ul>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-xl">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#002c60' }}>Required Documents</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#003a77' }}>Required Documents</h3>
             <ul className="space-y-4">
               {documents.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <FileText className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#002c60' }} />
+                  <FileText className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#003a77' }} />
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
@@ -193,7 +199,7 @@ const PersonalLoanPage = () => {
       {/* Quick Apply Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-white rounded-3xl p-8 shadow-xl">
-          <h2 className="text-3xl font-bold text-center mb-8" style={{ color: '#002c60' }}>Quick Application Process</h2>
+          <h2 className="text-3xl font-bold text-center mb-8" style={{ color: '#003a77' }}>Quick Application Process</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { step: "1", title: "Apply Online", desc: "Fill simple form in 2 minutes" },
@@ -202,10 +208,10 @@ const PersonalLoanPage = () => {
               { step: "4", title: "Receive Funds", desc: "Money in your account" }
             ].map((item, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: '#ff6900' }}>
+                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: '#f97316' }}>
                   {item.step}
                 </div>
-                <h3 className="font-bold mb-2" style={{ color: '#002c60' }}>{item.title}</h3>
+                <h3 className="font-bold mb-2" style={{ color: '#003a77' }}>{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
             ))}
@@ -215,13 +221,13 @@ const PersonalLoanPage = () => {
 
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ff6900]">Need Funds Urgently?</h2>
+        <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #003a77 0%, #004080 100%)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#f97316]">Need Funds Urgently?</h2>
           <p className="text-lg md:text-xl mb-8 opacity-90">
             Apply now and get instant approval. Money in your account within 48 hours!
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/contact" className="bg-white px-10 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg inline-flex items-center justify-center gap-2" style={{ color: '#002c60' }}>
+            <Link to="/contact" className="bg-white px-10 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg inline-flex items-center justify-center gap-2" style={{ color: '#003a77' }}>
               Apply Now <ArrowRight className="w-5 h-5" />
             </Link>
             <a href="tel:+911234567890" className="border-2 border-white px-10 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all inline-flex items-center justify-center gap-2">
@@ -235,3 +241,4 @@ const PersonalLoanPage = () => {
 };
 
 export default PersonalLoanPage;
+

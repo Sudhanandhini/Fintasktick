@@ -60,7 +60,7 @@ const GoldLoanPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100">
+    <div className="min-h-screen  bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       {/* Back Button */}
       {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
         <Link
@@ -72,14 +72,14 @@ const GoldLoanPage = () => {
       </div> */}
 
       {/* Hero Section */}
-      <div className="text-white py-20" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+      <div className="text-white py-20" style={{ background: 'linear-gradient(135deg, #003a77 0%, #004080 100%)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-4">
                 ⭐ Most Popular Loan
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Gold Loan</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 font-display">Gold Loan</h1>
               <p className="text-lg md:text-xl mb-8 text-blue-100">
                 Unlock the power of your gold with instant loans at competitive
                 rates. Get up to 75% of your gold's value within minutes!
@@ -87,7 +87,7 @@ const GoldLoanPage = () => {
               <div className="flex flex-wrap gap-4">
                 <Link
                   to="/contact"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="bg-white text-[#003772] px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   Apply Now
                 </Link>
@@ -132,7 +132,7 @@ const GoldLoanPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: "Interest Rate", value: "7% p.a." },
+            { label: "Interest Rate Starts from", value: "12% p.a." },
             { label: "Max Loan", value: "₹50 Lakhs" },
             { label: "Tenure", value: "Up to 3 years" },
             { label: "Processing", value: "0.5% + GST" },
@@ -141,7 +141,7 @@ const GoldLoanPage = () => {
               key={idx}
               className="bg-white p-6 rounded-xl shadow-lg text-center"
             >
-              <p className="text-3xl font-bold text-blue-600 mb-2">
+              <p className="text-3xl font-bold text-[#003772] mb-2">
                 {stat.value}
               </p>
               <p className="text-gray-600 text-sm">{stat.label}</p>
@@ -150,9 +150,15 @@ const GoldLoanPage = () => {
         </div>
       </div>
 
+        {/* ROI Disclaimer */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-3 mb-2 ">
+        <p className="text-sm text-gray-500 italic text-center">*ROI will Be based On Customer's Credit rating and Bankers Decision</p>
+      </div>
+
+
       {/* Features Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#003a77] font-display">
           Why Choose Our Gold Loan?
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -161,10 +167,10 @@ const GoldLoanPage = () => {
               key={idx}
               className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300"
             >
-              <div className="bg-[#ff6900] w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white">
+              <div className="bg-[#f97316] w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-800">
+              <h3 className="text-xl font-bold mb-2 text-[#003a77] font-display">
                 {feature.title}
               </h3>
               <p className="text-gray-600">{feature.desc}</p>
@@ -178,7 +184,7 @@ const GoldLoanPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             <div className="bg-white p-8 rounded-2xl shadow-xl">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#003a77] font-display">
                 Eligibility Criteria
               </h3>
               <ul className="space-y-4">
@@ -191,7 +197,7 @@ const GoldLoanPage = () => {
               </ul>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-xl">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#003a77] font-display">
                 Required Documents
               </h3>
               <ul className="space-y-4">
@@ -209,17 +215,17 @@ const GoldLoanPage = () => {
 
       {/* How to Apply */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#003a77] font-display">
           How to Apply
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {howToApply.map((item, idx) => (
             <div key={idx} className="relative">
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <div className="bg-[#ff6900] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="bg-[#f97316] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {item.step}
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-gray-800">
+                <h3 className="text-lg font-bold mb-2 text-[#003a77] font-display">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
@@ -236,8 +242,8 @@ const GoldLoanPage = () => {
 
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-       <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ff6900]">
+       <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #003a77 0%, #004080 100%)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#f97316] font-display">
             Ready to Get Your Gold Loan?
           </h2>
           <p className="text-lg md:text-xl mb-8 text-blue-100">
@@ -246,7 +252,7 @@ const GoldLoanPage = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               to="/contact"
-              className="bg-white text-blue-600 px-10 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all shadow-lg inline-flex items-center justify-center gap-2"
+              className="bg-white text-[#003a77] px-10 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg inline-flex items-center justify-center gap-2"
             >
               Apply Now <ArrowRight className="w-5 h-5" />
             </Link>
@@ -264,3 +270,5 @@ const GoldLoanPage = () => {
 };
 
 export default GoldLoanPage;
+
+

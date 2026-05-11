@@ -5,12 +5,29 @@ import logo from '../assets/logo-full.png'
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+
+  const productSubmenu = [
+    { name: 'Home Loan', path: '/homeloan' },
+    { name: 'Mortgage Loan', path: '/mortgageloan' },
+    { name: 'Personal Loan', path: '/personalloan' },
+    { name: 'Business Loan', path: '/businessloan' },
+    { name: 'Car Loan', path: '/carloan' },
+    { name: 'Education Loan', path: '/educationloan' },
+    { name: 'Drop Line OD Loan', path: '/odloan' },
+    { name: 'Machinery Loan', path: '/machineryloan' },
+    { name: 'Working Capital', path: '/workingcapitalloan' },
+    { name: 'Gold Loan', path: '/goldloan' },
+    { name: 'Insurance', path: '/insuranceloan' },
+  ];
 
   const menuItems = [
     { name: 'HOME', path: '/', hasDropdown: false },
     { name: 'ABOUT', path: '/about', hasDropdown: false },
-    { name: 'PRODUCTS', path: '/products', hasDropdown: false },
+    { name: 'PRODUCTS', path: '/products', hasDropdown: true },
     { name: 'OTHER SERVICES', path: '/services', hasDropdown: false },
+    { name: 'GALLERY', path: '/gallery', hasDropdown: false },
     { name: 'CONTACT', path: '/contact', hasDropdown: false },
   ];
 
@@ -40,15 +57,15 @@ const Header = () => {
 
           {/* Right Side - Social Icons */}
           <div className="flex items-center gap-3">
-            <a href="#" className="hover:text-orange-500 transition-colors">
+            <a href="https://www.instagram.com/fintasktick100323?igsh=MWcycm5yY25vbmUyNA==" className="hover:text-orange-500 transition-colors">
               <Instagram size={16} />
             </a>
             <a href="https://www.facebook.com/share/1Bsnyx2PuY/?mibextid=wwXIfr" className="hover:text-orange-500 transition-colors">
               <Facebook size={16} />
             </a>
-            <a href="#" className="hover:text-orange-500 transition-colors">
+            {/* <a href="#" className="hover:text-orange-500 transition-colors">
               <Linkedin size={16} />
-            </a>
+            </a> */}
             {/* <a href="#" className="hover:text-orange-500 transition-colors">
               <Rss size={16} />
             </a> */}
@@ -73,14 +90,33 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {menuItems.map((item, index) => (
-              <div key={index} className="relative group">
+              <div
+                key={index}
+                className="relative group"
+                onMouseEnter={() => item.hasDropdown && setProductsOpen(true)}
+                onMouseLeave={() => item.hasDropdown && setProductsOpen(false)}
+              >
                 <Link
                   to={item.path}
                   className="flex items-center gap-1 text-gray-700 hover:text-orange-500 font-medium transition-colors text-sm"
                 >
                   {item.name}
-                  {item.hasDropdown && <ChevronDown size={14} />}
+                  {item.hasDropdown && <ChevronDown size={14} className={`transition-transform duration-200 ${productsOpen ? 'rotate-180' : ''}`} />}
                 </Link>
+                {item.hasDropdown && productsOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-52 bg-white rounded-xl shadow-xl border border-gray-100 z-50 py-2">
+                    {productSubmenu.map((sub, i) => (
+                      <Link
+                        key={i}
+                        to={sub.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors"
+                        onClick={() => setProductsOpen(false)}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </nav>
@@ -97,16 +133,43 @@ const Header = () => {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t">
-            <nav className="flex flex-col gap-3 mt-4">
+            <nav className="flex flex-col gap-1 mt-4">
               {menuItems.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.path}
-                  className="text-gray-700 hover:text-orange-500 font-medium py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                <div key={index}>
+                  {item.hasDropdown ? (
+                    <>
+                      <button
+                        className="w-full flex items-center justify-between text-gray-700 hover:text-orange-500 font-medium py-2 text-left"
+                        onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                      >
+                        {item.name}
+                        <ChevronDown size={14} className={`transition-transform duration-200 ${mobileProductsOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {mobileProductsOpen && (
+                        <div className="pl-4 flex flex-col gap-1 mb-1">
+                          {productSubmenu.map((sub, i) => (
+                            <Link
+                              key={i}
+                              to={sub.path}
+                              className="text-gray-600 hover:text-orange-500 text-sm py-1.5"
+                              onClick={() => { setMobileMenuOpen(false); setMobileProductsOpen(false); }}
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      className="block text-gray-700 hover:text-orange-500 font-medium py-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
             </nav>
           </div>

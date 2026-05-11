@@ -18,6 +18,7 @@ import ODLoanPage from './pages/ODLoanPage';
 import InsuranceServicesPage from './pages/InsuranceServicesPage';
 import CreditCardLoanPage from './pages/CreditCardLoanPage';
 import WorkingCapitalLoanPage from './pages/WorkingCapitalLoanPage';
+import GalleryPage from './pages/GalleryPage';
 
 import ScrollToTop from './components/Scrolltotop';
 
@@ -48,6 +49,7 @@ function App() {
            <Route path="/insuranceloan" element={<InsuranceServicesPage />} />
            <Route path='/creditcardloan' element={<CreditCardLoanPage />} />
            <Route path='/workingcapitalloan' element={<WorkingCapitalLoanPage />} />
+           <Route path='/gallery' element={<GalleryPage />} />
 
           </Routes>
       </main>

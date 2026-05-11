@@ -121,15 +121,15 @@ const CreditCardLoanPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <Link to="/products" className="inline-flex items-center gap-2 font-medium hover:opacity-80 transition-opacity" style={{ color: '#002c60' }}>
+        <Link to="/products" className="inline-flex items-center gap-2 font-medium hover:opacity-80 transition-opacity" style={{ color: '#003a77' }}>
           <ArrowLeft className="w-5 h-5" /> Back to Products
         </Link>
       </div> */}
 
       {/* Hero Section */}
-      <div className="text-white py-20" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
+      <div className="text-white py-20" style={{ background: 'linear-gradient(135deg, #003a77 0%, #004080 100%)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -141,7 +141,7 @@ const CreditCardLoanPage = () => {
                 Get premium credit cards with exclusive rewards, cashback, and benefits. Convert purchases to EMI, transfer balances, and enjoy flexible credit facilities.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/contact" className="bg-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" style={{ color: '#002c60' }}>
+                <Link to="/contact" className="bg-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" style={{ color: '#003a77' }}>
                   Apply Now
                 </Link>
                 {/* <button className="border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all">
@@ -188,7 +188,7 @@ const CreditCardLoanPage = () => {
             { label: "Approval Time", value: "Instant" }
           ].map((stat, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg text-center">
-              <p className="text-3xl font-bold mb-2" style={{ color: '#002c60' }}>{stat.value}</p>
+              <p className="text-3xl font-bold mb-2" style={{ color: '#003a77' }}>{stat.value}</p>
               <p className="text-gray-600 text-sm">{stat.label}</p>
             </div>
           ))}
@@ -197,16 +197,16 @@ const CreditCardLoanPage = () => {
 
       {/* Features Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#002c60' }}>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#003a77' }}>
           Why Choose Our Credit Card Services?
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300">
-              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: '#ff6900' }}>
+              <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 text-white" style={{ background: '#f97316' }}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold mb-2" style={{ color: '#002c60' }}>{feature.title}</h3>
+              <h3 className="text-xl font-bold mb-2" style={{ color: '#003a77' }}>{feature.title}</h3>
               <p className="text-gray-600">{feature.desc}</p>
             </div>
           ))}
@@ -216,7 +216,7 @@ const CreditCardLoanPage = () => {
       {/* Card Types */}
       <div className="py-16" style={{ background: 'linear-gradient(to right, rgba(0, 44, 96, 0.05), rgba(0, 64, 128, 0.05))' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ color: '#002c60' }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ color: '#003a77' }}>
             Types of Credit Cards
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -227,12 +227,12 @@ const CreditCardLoanPage = () => {
               <div key={idx} className="bg-white rounded-xl shadow-lg overflow-hidden">
                 <div className="p-6">
                   <div className="text-5xl mb-4">{card.icon}</div>
-                  <h3 className="text-2xl font-bold mb-2" style={{ color: '#002c60' }}>{card.title}</h3>
+                  <h3 className="text-2xl font-bold mb-2" style={{ color: '#003a77' }}>{card.title}</h3>
                   <p className="text-gray-600 mb-4">{card.desc}</p>
                   <ul className="space-y-2">
                     {card.features.map((feature, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 flex-shrink-0" style={{ color: '#002c60' }} />
+                        <CheckCircle className="w-4 h-4 flex-shrink-0" style={{ color: '#003a77' }} />
                         <span className="text-sm text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -246,13 +246,13 @@ const CreditCardLoanPage = () => {
 
       {/* Loan Facilities */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#002c60' }}>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#003a77' }}>
           Credit Card Loan Facilities
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {loanFacilities.map((facility, idx) => (
             <div key={idx} className="bg-white p-8 rounded-2xl shadow-xl">
-              <h3 className="text-2xl font-bold mb-3" style={{ color: '#ff6900' }}>{facility.title}</h3>
+              <h3 className="text-2xl font-bold mb-3" style={{ color: '#f97316' }}>{facility.title}</h3>
               <p className="text-gray-600 mb-6">{facility.desc}</p>
               <ul className="space-y-3">
                 {facility.features.map((feature, i) => (
@@ -270,13 +270,13 @@ const CreditCardLoanPage = () => {
       {/* Benefits */}
       <div className="py-16" style={{ background: 'linear-gradient(to right, rgba(0, 44, 96, 0.05), rgba(0, 64, 128, 0.05))' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#002c60' }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#003a77' }}>
             Credit Card Benefits
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: '#ff6900' }} />
+                <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: '#f97316' }} />
                 <span className="text-gray-700 text-sm">{benefit}</span>
               </div>
             ))}
@@ -286,11 +286,11 @@ const CreditCardLoanPage = () => {
 
       {/* Security Features */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#002c60' }}>Security Features</h2>
+        <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#003a77' }}>Security Features</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {securityFeatures.map((feature, idx) => (
             <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all text-center">
-              <Shield className="w-12 h-12 mx-auto mb-4" style={{ color: '#ff6900' }} />
+              <Shield className="w-12 h-12 mx-auto mb-4" style={{ color: '#f97316' }} />
               <p className="font-semibold text-gray-800">{feature}</p>
             </div>
           ))}
@@ -300,12 +300,12 @@ const CreditCardLoanPage = () => {
       {/* Fees & Charges */}
       <div className="py-16" style={{ background: 'linear-gradient(to right, rgba(0, 44, 96, 0.05), rgba(0, 64, 128, 0.05))' }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#002c60' }}>Fees & Charges</h2>
+          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#003a77' }}>Fees & Charges</h2>
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr style={{ background: '#ff6900' }}>
+                  <tr style={{ background: '#f97316' }}>
                     <th className="px-6 py-4 text-left text-white">Feature</th>
                     <th className="px-6 py-4 text-left text-white">Amount</th>
                     <th className="px-6 py-4 text-left text-white">Note</th>
@@ -330,7 +330,7 @@ const CreditCardLoanPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           <div className="bg-white p-8 rounded-2xl shadow-xl">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#002c60' }}>Eligibility Criteria</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#003a77' }}>Eligibility Criteria</h3>
             <ul className="space-y-4">
               {eligibility.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
@@ -341,11 +341,11 @@ const CreditCardLoanPage = () => {
             </ul>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-xl">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#002c60' }}>Required Documents</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#003a77' }}>Required Documents</h3>
             <ul className="space-y-4">
               {documents.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <FileText className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#002c60' }} />
+                  <FileText className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#003a77' }} />
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
@@ -357,7 +357,7 @@ const CreditCardLoanPage = () => {
       {/* Application Process */}
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#002c60' }}>Simple Application Process</h2>
+          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#003a77' }}>Simple Application Process</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { step: "1", title: "Choose Card", desc: "Select the card that suits you" },
@@ -366,10 +366,10 @@ const CreditCardLoanPage = () => {
               { step: "4", title: "Get Approved", desc: "Receive card in 5-7 days" }
             ].map((item, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: '#ff6900' }}>
+                <div className="text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style={{ background: '#f97316' }}>
                   {item.step}
                 </div>
-                <h3 className="font-bold mb-2" style={{ color: '#002c60' }}>{item.title}</h3>
+                <h3 className="font-bold mb-2" style={{ color: '#003a77' }}>{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
             ))}
@@ -379,13 +379,13 @@ const CreditCardLoanPage = () => {
 
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #002c60 0%, #004080 100%)' }}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ff6900]">Ready to Get Your Credit Card?</h2>
+        <div className="rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #003a77 0%, #004080 100%)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#f97316]">Ready to Get Your Credit Card?</h2>
           <p className="text-lg md:text-xl mb-8 opacity-90 ">
             Apply now and enjoy exclusive rewards, cashback, and benefits
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/contact" className="bg-white px-10 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg inline-flex items-center justify-center gap-2" style={{ color: '#002c60' }}>
+            <Link to="/contact" className="bg-white px-10 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg inline-flex items-center justify-center gap-2" style={{ color: '#003a77' }}>
               Apply Now <ArrowRight className="w-5 h-5" />
             </Link>
             <a href="tel:+911234567890" className="border-2 border-white px-10 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all inline-flex items-center justify-center gap-2">
@@ -399,3 +399,4 @@ const CreditCardLoanPage = () => {
 };
 
 export default CreditCardLoanPage;
+
