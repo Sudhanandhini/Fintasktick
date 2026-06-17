@@ -445,8 +445,8 @@ const HomePage = () => {
       image: heroBg3,
       title: (
         <>
-          <span style={{ color: '#60a5fa' }}>Expert Financial</span>
-          {' '}Guidance
+         Expert Financial
+          {' '} <span style={{ color: '#302571' }}>Guidance</span>
         </>
       ),
       description: 'Over 20 years of experience helping customers achieve their financial goals with personalized solutions.',
@@ -565,7 +565,8 @@ const HomePage = () => {
                 style={{
                   backgroundImage: `url(${slide.image})`,
                   transform: i === currentSlide ? 'scale(1.08)' : 'scale(1)',
-                  transition: 'transform 8s ease-out'
+                  transition: 'transform 8s ease-out',
+                  backgroundSize: 'cover'
                 }}
               />
               {/* Gradient overlays 
@@ -663,7 +664,7 @@ const HomePage = () => {
             <div className="flex marquee-track whitespace-nowrap">
               {[...partners, ...partners].map((name, i) => (
                 <div key={i} className="inline-flex items-center mx-8 md:mx-12">
-                  <span className="text-[#cb5b00] font-semibold text-sm md:text-base tracking-wider uppercase hover:text-orange-500 transition-colors duration-300 cursor-default">
+                  <span className="text-[#003a77] font-semibold text-sm md:text-base tracking-wider uppercase hover:text-orange-500 transition-colors duration-300 cursor-default">
                     {name}
                   </span>
                 </div>
@@ -749,7 +750,7 @@ const HomePage = () => {
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-500/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <span className="inline-block text-[#004080] font-semibold text-sm uppercase tracking-widest mb-2">Mission</span>
               <h3 className="text-2xl font-bold text-[#003a77] mb-4">Our Mission</h3>
-              <p className="text-gray-500 leading-relaxed">Empowering Financial Growth — Disbursing INR 5000 Crore in Loans within the Next 10 Years. We are driven by a bold and ambitious mission to transform lives.</p>
+              <p className="text-gray-500 leading-relaxed">Empowering Financial Growth — Disbursing INR 20,000 Crore in Loans within the next 5 Years. We are driven by a bold and ambitious mission to transform lives.</p>
             </div>
           </div>
         </div>
