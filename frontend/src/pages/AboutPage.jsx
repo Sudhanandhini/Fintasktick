@@ -246,7 +246,7 @@ const AboutPage = () => {
   const [ctaRef, ctaVis] = useScrollReveal(0.2);
 
   const stats = [
-    { end: 20, suffix: '+', label: 'Years of Experience', description: 'Combined expertise from former banking professionals' },
+    { end: 3, suffix: '+', label: 'Years of Experience', description: 'Combined expertise from former banking professionals' },
     { end: 5000, suffix: '+', label: 'Satisfied Clients', description: 'Successfully served thousands of customers' },
     { end: 100, suffix: '%', label: 'Personalized Service', description: 'Tailored solutions for your unique needs' }
   ];
@@ -352,7 +352,7 @@ const AboutPage = () => {
                 </div>
                 <h3 className="font-display text-2xl font-bold text-[#003a77]">Our Vision</h3>
               </div>
-              <p className="text-gray-500 leading-relaxed">Empowering Individuals, Creating Opportunities. We are committed to providing financial solutions that empower individuals and businesses to realize their dreams and aspirations. Through our dedicated efforts, we strive to grow our presence across the entire region.</p>
+              <p className="text-gray-500 leading-relaxed">Empowering Individuals, Creating Opportunities. We are committed to providing financial solutions that empower individuals and businesses to realize their dreams and aspirations.</p>
             </div>
 
             <div className={`reveal-right ${visionVis ? 'active' : ''} relative bg-white p-10 rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-lg transition-shadow duration-500`} style={{ animationDelay: '0.2s' }}>
@@ -364,7 +364,7 @@ const AboutPage = () => {
                 </div>
                 <h3 className="font-display text-2xl font-bold text-[#003a77]">Our Mission</h3>
               </div>
-              <p className="text-gray-500 leading-relaxed">Empowering Financial Growth — Disbursing INR 5000 Crore in Loans within the Next 5 Years. We are driven by a bold and ambitious mission to transform lives through accessible and efficient financial solutions.</p>
+              <p className="text-gray-500 leading-relaxed">Empowering Financial Growth — Disbursing INR 30,000 Crore in Loans within the next 5 Years. We are driven by a bold and ambitious mission to transform lives.</p>
             </div>
           </div>
         </div>

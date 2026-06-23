@@ -428,7 +428,7 @@ const ContactPage = () => {
 
           <div className="space-y-4">
             {[
-              { q: 'How long does the loan approval process take?', a: 'Typically, loan approval takes 3-4 days for personal loan and 7-10 days for home loan after submitting all required documents.' },
+              { q: 'How long does the loan approval process take?', a: 'Typically, loan approval takes 3-4 days for personal loan and 7-15 days for home loan after submitting all required documents.' },
               { q: 'What documents do I need to apply?', a: "Generally, you'll need ID proof, address proof, income proof, and bank statements." },
               { q: 'Do you charge any fees for consultation?', a: 'No, our initial consultation is completely free.' }
             ].map((faq, i) => (

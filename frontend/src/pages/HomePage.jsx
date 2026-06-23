@@ -467,11 +467,11 @@ const HomePage = () => {
   /* ── Stats ── */
   const [statsRef, statsVisible] = useScrollReveal(0.2);
   const stats = [
-    { end: 22, suffix: '+', label: 'Years in Business' },
-    { end: 100, suffix: '+ Cr', label: 'Unsecured Loans Disbursed' },
-    { end: 500, suffix: '+ Cr', label: 'Secured Loans Disbursed' },
-    { end: 2, suffix: '+ Cr', label: 'Insurance' },
-    { end: 3000, suffix: '+', label: 'Clients Serviced' }
+    { end: 3, suffix: '+', label: 'Years in Business' },
+    { end: 30, suffix: 'Cr +', label: 'Unsecured Loans Disbursed' },
+    { end: 200, suffix: 'Cr +', label: 'Secured Loans Disbursed' },
+    { end: 2, suffix: 'Cr +', label: 'Insurance' },
+    { end: 5000, suffix: '+', label: 'Clients Serviced' }
   ];
 
   /* ── Section reveals ── */
@@ -612,7 +612,7 @@ const HomePage = () => {
                         </Link>
                         <Link
                           to={slide.secondaryBtn.link}
-                          className="bg-black/50 backdrop-blur-sm border border-white/30 hover:bg-white/20 text-white px-7 py-3 rounded-lg font-semibold text-sm transition-all duration-300"
+                          className="bg-black/100 backdrop-blur-sm border border-white/30 hover:bg-white/20 text-white px-7 py-3 rounded-lg font-semibold text-sm transition-all duration-300"
                         >
                           {slide.secondaryBtn.text}
                         </Link>
@@ -750,7 +750,7 @@ const HomePage = () => {
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-500/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <span className="inline-block text-[#004080] font-semibold text-sm uppercase tracking-widest mb-2">Mission</span>
               <h3 className="text-2xl font-bold text-[#003a77] mb-4">Our Mission</h3>
-              <p className="text-gray-500 leading-relaxed">Empowering Financial Growth — Disbursing INR 20,000 Crore in Loans within the next 5 Years. We are driven by a bold and ambitious mission to transform lives.</p>
+              <p className="text-gray-500 leading-relaxed">Empowering Financial Growth — Disbursing INR 30,000 Crore in Loans within the next 5 Years. We are driven by a bold and ambitious mission to transform lives.</p>
             </div>
           </div>
         </div>
