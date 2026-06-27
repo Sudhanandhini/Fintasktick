@@ -9,6 +9,31 @@ import { Link, useNavigate } from 'react-router-dom';
 
 /* ───────────────────────── CSS ANIMATIONS ───────────────────────── */
 const animationStyles = `
+  @font-face {
+    font-family: 'Tangerine';
+    src: url('/src/assets/fonts/Tangerine-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+      color:#039EDE !important;
+  }
+  @font-face {
+    font-family: 'Tangerine';
+    src: url('/src/assets/fonts/Tangerine-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+      color:#039EDE !important;
+  }
+  .tangerine-heading {
+    font-family: 'Tangerine', cursive !important;
+    font-weight: 700;
+    font-size: 3.5rem !important;
+    line-height: 1.1;
+      color:#039EDE !important;
+  }
+  @media (min-width: 768px) {
+    .tangerine-heading { font-size: 4.5rem !important; }
+  }
+
   :root {
     --orange-500: #f97316;
     --orange-600: #ea580c;
@@ -195,6 +220,11 @@ const useScrollReveal = (threshold = 0.15) => {
 };
 
 /* ═══════════════════════ MAIN COMPONENT ═══════════════════════ */
+const numberToWords = (n) => {
+  const words = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve'];
+  return words[n] ?? n;
+};
+
 const productNames = [
   'Home Loan', 'Mortgage Loan', 'Personal Loan', 'Business Loan',
   'Car Loan', 'Education Loan', 'OD Loan', 'Machinery Loan',
@@ -354,14 +384,14 @@ const ProductsPage = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block text-orange-500 font-semibold text-sm uppercase tracking-widest mb-3">Quick Apply</span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-[#003a77] mb-3">Apply for Your Interested Products</h2>
+            <h2 className="tangerine-heading text-[#003a77] mb-3">Mark Your Needs</h2>
             <p className="text-gray-500 max-w-xl mx-auto">Select the products you're interested in and our team will contact you shortly</p>
           </div>
 
           {/* Product checkboxes */}
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
             <p className="font-semibold text-[#003a77] mb-5 text-lg">Select Products <span className="text-orange-500 text-sm font-normal">(choose one or more)</span></p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {productNames.map((name) => {
                 const checked = selectedProducts.includes(name);
                 return (
@@ -453,7 +483,7 @@ const ProductsPage = () => {
                     type="submit" disabled={enquirySubmitting}
                     className="cta-btn w-full text-white font-bold py-3.5 px-6 rounded-lg text-sm relative z-10 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    {enquirySubmitting ? 'Sending...' : `Submit Enquiry for ${selectedProducts.length} Product${selectedProducts.length > 1 ? 's' : ''}`}
+                    {enquirySubmitting ? 'Sending...' : `Submit Enquiry for ${numberToWords(selectedProducts.length)} Product${selectedProducts.length > 1 ? 's' : ''}`}
                   </button>
                 </form>
               )}

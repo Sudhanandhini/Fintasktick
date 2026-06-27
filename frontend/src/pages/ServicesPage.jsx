@@ -226,17 +226,24 @@ const ServicesPage = () => {
   const [ctaRef, ctaVis] = useScrollReveal(0.2);
 
   const mainServices = [
+
+     {
+      icon: <Scale className="w-8 h-8 text-[#004080]" />,
+      title: 'Legal Services',
+      description: 'Professional legal assistance for property and documentation',
+      services: ['Property Registration', 'Encumbrance Certificate (EC)', 'Tax paid receipt', 'Khata extract/certificate', 'Sale agreement', 'Legal documentation', 'Property verification', 'Title search services']
+    },
     {
       icon: <Calculator className="w-8 h-8 text-orange-500" />,
       title: 'Accounting & Taxation Consultancy',
       description: 'Comprehensive accounting and tax solutions for individuals and businesses',
       services: ['Company registration', 'Partnership registration', 'Proprietorship registration', 'MSME registration', 'Labour registration', 'GST registration', 'Income tax filing', 'Preparation of financials', 'Project report - financial', 'Provisional financials', 'Form – 16']
     },
-    {
-      icon: <Scale className="w-8 h-8 text-[#004080]" />,
-      title: 'Legal Services',
-      description: 'Professional legal assistance for property and documentation',
-      services: ['Property Registration', 'Encumbrance Certificate (EC)', 'Tax paid receipt', 'Khata extract/certificate', 'Sale agreement', 'Legal documentation', 'Property verification', 'Title search services']
+      {
+      icon: <FileText className="w-8 h-8 text-orange-500" />,
+      title: 'Plan & Estimation',
+      description: 'Professional architectural planning and cost estimation services',
+      services: ['Architectural planning', 'Construction estimates', 'Material costing', 'Project feasibility', 'Budget planning', 'Design consultation', 'Renovation planning']
     },
     {
       icon: <Building className="w-8 h-8 text-emerald-600" />,
@@ -244,12 +251,7 @@ const ServicesPage = () => {
       description: 'Complete real estate solutions for buying and selling properties',
       services: ['Residential properties', 'Industrial properties', 'Commercial properties', 'Property buying assistance', 'Property selling support', 'Market analysis', 'Property valuation', 'Documentation support']
     },
-    {
-      icon: <FileText className="w-8 h-8 text-orange-500" />,
-      title: 'Plan & Estimation',
-      description: 'Professional architectural planning and cost estimation services',
-      services: ['Architectural planning', 'Construction estimates', 'Material costing', 'Project feasibility', 'Budget planning', 'Design consultation', 'Renovation planning']
-    }
+ 
     // {
     //   icon: <Shield className="w-8 h-8 text-[#004080]" />,
     //   title: 'Insurance Services',

@@ -281,37 +281,44 @@ const Footer = ({ services = [], companyLinks = [] }) => {
                                     </ul>
                                 ) : (
                                     <ul className="space-y-3">
-                                        <li>
-                                            <Link to="/services" className="flex items-center text-black hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
-                                                <ChevronRight size={16} className="mr-2" />
-                                                Real Estate
-                                            </Link>
-                                        </li>
-                                        <li>
+
+                                         <li>
                                             <Link to="/services" className="flex items-center text-black hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                                 <ChevronRight size={16} className="mr-2" />
                                                 Property Legal Solutions
 
                                             </Link>
                                         </li>
-                                             <li>
-                                        <Link to="/services" className="flex items-center text-black hover:text-orange-500 transition-all hover:translate-x-1">
-                                            <ChevronRight size={16} className="mr-2" /> Insurance
-                                        </Link>
-                                    </li>
-                                      <li>
+
+                                          <li>
                                             <Link to="/services" className="flex items-center text-black hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                                 <ChevronRight size={16} className="mr-2" />
                                                 Account and Taxation 
                                             </Link>
                                         </li>
-                                           <li>
+                                            <li>
                                             <Link to="/services" className="flex items-center text-black hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
                                                 <ChevronRight size={16} className="mr-2" />
                                                 Plan and Estimation 
                                             </Link>
                                         </li>
 
+                                              <li>
+                                        <Link to="/services" className="flex items-center text-black hover:text-orange-500 transition-all hover:translate-x-1">
+                                            <ChevronRight size={16} className="mr-2" /> Insurance
+                                        </Link>
+                                    </li>
+                                    
+
+                                        <li>
+                                            <Link to="/services" className="flex items-center text-black hover:text-orange-500 transform transition-all duration-300 hover:translate-x-1">
+                                                <ChevronRight size={16} className="mr-2" />
+                                                Real Estate
+                                            </Link>
+                                        </li>
+                                       
+                                       
+                                       
                                     </ul>
                                 )}
                             </div>

@@ -235,7 +235,7 @@ const ContactPage = () => {
 
   const contactInfo = [
     { icon: <Phone className="w-6 h-6 text-orange-500" />, title: 'Phone', details: ['+91 9164366690'] },
-    { icon: <Mail className="w-6 h-6 text-orange-500" />, title: 'Email', details: ['fintasktick@gmail.com', 'info@fintasktick.com' ] },
+    { icon: <Mail className="w-6 h-6 text-orange-500" />, title: 'Email', details: ['fintasktick@gmail.com', 'connect@fintasktick.com' ] },
     { icon: <MapPin className="w-6 h-6 text-orange-500" />, title: 'Address', details: ['#99/A, 16th Main, 5th Cross', 'Sri Rama Arcade', 'Opposite to Maggi Adda', 'Vijayanagar, Bangalore 560040'] },
     { icon: <Clock className="w-6 h-6 text-orange-500" />, title: 'Business Hours', details: ['Mon - Fri: 10:00 AM - 6:30 PM', 'Sat: 10:00 AM - 5:30 PM', 'May vary depending on work'] }
   ];

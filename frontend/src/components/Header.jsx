@@ -40,7 +40,7 @@ const Header = () => {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <MapPin size={16} className="text-orange-500" />
-              <span>Vijayanagar, Bangalore( <a href="https://maps.app.goo.gl/hEMV4RHSMcK7RDte6" className="underline hover:text-orange-500">View map</a> )</span>
+              <span>Vijayanagar, Bengaluru ( <a href="https://maps.app.goo.gl/hEMV4RHSMcK7RDte6" className="underline hover:text-orange-500">View map</a> )</span>
             </div>
 
             {/* Phone */}
@@ -50,7 +50,7 @@ const Header = () => {
                 href="tel:9164366690"
                 className="hover:text-orange-500 transition-colors duration-200"
               >
-                9164366690
+                +91 91643 66690
               </a>
             </div>
           </div>

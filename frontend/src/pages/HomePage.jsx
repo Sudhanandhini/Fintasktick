@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   ArrowRight, Shield, Clock, Users, TrendingUp, Home, Car,
   GraduationCap, Building2, Briefcase, Coins, ChevronLeft,
@@ -12,6 +12,26 @@ import heroBg31 from '../assets/cta1.jpg';
 
 /* ───────────────────────── CSS ANIMATIONS ───────────────────────── */
 const animationStyles = `
+  @font-face {
+    font-family: 'Tangerine';
+    src: url('/src/assets/fonts/Tangerine-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Tangerine';
+    src: url('/src/assets/fonts/Tangerine-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  .tangerine-heading {
+    font-family: 'Tangerine', cursive !important;
+    font-weight: 700;
+    font-size: 3.5rem !important;
+    line-height: 1.1;
+  }
+ 
+
   :root {
     --orange-500: #f97316;
     --orange-600: #ea580c;
@@ -405,6 +425,11 @@ const Counter = ({ end, suffix, label, inView, duration = 2000 }) => {
   );
 };
 
+const numberToWords = (n) => {
+  const words = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve'];
+  return words[n] ?? n;
+};
+
 /* ═══════════════════════ MAIN COMPONENT ═══════════════════════ */
 const HomePage = () => {
   /* ── Slider ── */
@@ -475,8 +500,11 @@ const HomePage = () => {
   ];
 
   /* ── Section reveals ── */
+  const navigate = useNavigate();
+  const [heroRef, heroVis] = useScrollReveal(0.1);
   const [whyRef, whyVis] = useScrollReveal();
-  const [prodRef, prodVis] = useScrollReveal(0.1);
+  const [prodRef, prodVis] = useScrollReveal(0.05);
+  const [processRef, processVis] = useScrollReveal(0.1);
   const [visionRef, visionVis] = useScrollReveal();
   const [svcRef, svcVis] = useScrollReveal();
   const [ctaRef, ctaVis] = useScrollReveal(0.2);
@@ -541,6 +569,49 @@ const HomePage = () => {
     } catch { alert('Something went wrong!'); }
     setFormSubmitting(false);
   };
+
+  const [selectedProducts, setSelectedProducts] = useState([]);
+  const [enquiryForm, setEnquiryForm] = useState({ name: '', phone: '', email: '', subject: '' });
+  const [enquirySubmitting, setEnquirySubmitting] = useState(false);
+  const [enquirySuccess, setEnquirySuccess] = useState(false);
+
+  const toggleProduct = (name) => {
+    setSelectedProducts(prev =>
+      prev.includes(name) ? prev.filter(p => p !== name) : [...prev, name]
+    );
+    setEnquirySuccess(false);
+  };
+
+  const handleEnquiryChange = (e) =>
+    setEnquiryForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+
+  const handleEnquirySubmit = async (e) => {
+    e.preventDefault();
+    setEnquirySubmitting(true);
+    try {
+      const res = await fetch('http://localhost:5000/api/product-enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...enquiryForm, selectedProducts })
+      });
+      const data = await res.json();
+      if (data.success) {
+        setEnquirySuccess(true);
+        setSelectedProducts([]);
+        setEnquiryForm({ name: '', phone: '', email: '', subject: '' });
+      } else { alert('Failed to send enquiry. Please try again.'); }
+    } catch { alert('Something went wrong. Please try again.'); }
+    setEnquirySubmitting(false);
+  };
+
+
+
+  const productNames = [
+  'Home Loan', 'Mortgage Loan', 'Personal Loan', 'Business Loan',
+  'Car Loan', 'Education Loan', 'OD Loan', 'Machinery Loan',
+  'Working Capital', 'Gold Loan', 'Insurance'
+];
+
 
   /* ═══════════════════════ RENDER ═══════════════════════ */
   return (
@@ -694,8 +765,8 @@ const HomePage = () => {
                 <div className="icon-wrap w-14 h-14 rounded-xl bg-orange-50 flex items-center justify-center mb-5">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[#003a77] mb-3">{item.title}</h3>
-                <p className="text-gray-500 leading-relaxed text-[15px]">{item.description}</p>
+                <h3 className="text-[20px] font-bold text-[#003a77] mb-3">{item.title}</h3>
+                <p className="text-gray-500 leading-relaxed text-[18px]">{item.description}</p>
               </div>
             ))}
           </div>
@@ -755,6 +826,120 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+        {/* ════════ PRODUCT SELECTION ENQUIRY ════════ */}
+      <section className="py-20 px-4 bg-gray-70">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block text-orange-500 font-semibold text-sm uppercase tracking-widest mb-3">Quick Apply</span>
+            <h2 className="tangerine-heading text-[#003a77] mb-3">Mark Your Needs</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">Select the products you're interested in and our team will contact you shortly</p>
+          </div>
+
+          {/* Product checkboxes */}
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <p className="font-semibold text-[#003a77] mb-5 text-lg">Select Products <span className="text-orange-500 text-sm font-normal">(choose one or more)</span></p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {productNames.map((name) => {
+                const checked = selectedProducts.includes(name);
+                return (
+                  <label
+                    key={name}
+                    onClick={() => toggleProduct(name)}
+                    className={`flex items-center gap-3 p-3 rounded-xl border-2 cursor-pointer transition-all duration-200 select-none ${
+                      checked
+                        ? 'border-orange-500 bg-orange-50'
+                        : 'border-gray-200 bg-white hover:border-orange-300 hover:bg-orange-50/40'
+                    }`}
+                  >
+                    <div className={`w-5 h-5 rounded flex items-center justify-center flex-shrink-0 border-2 transition-all duration-200 ${
+                      checked ? 'bg-orange-500 border-orange-500' : 'border-gray-300'
+                    }`}>
+                      {checked && (
+                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      )}
+                    </div>
+                    <span className={`text-sm font-medium leading-tight ${checked ? 'text-orange-600' : 'text-gray-700'}`}>{name}</span>
+                  </label>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Form — appears when at least one product selected */}
+          {selectedProducts.length > 0 && (
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+              <div className="flex flex-wrap gap-2 mb-6">
+                {selectedProducts.map(p => (
+                  <span key={p} className="inline-flex items-center gap-1.5 bg-orange-100 text-orange-700 text-xs font-semibold px-3 py-1 rounded-full">
+                    {p}
+                    <button onClick={() => toggleProduct(p)} className="hover:text-orange-900 transition-colors">×</button>
+                  </span>
+                ))}
+              </div>
+
+              {enquirySuccess ? (
+                <div className="text-center py-10">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#003a77] mb-2">Enquiry Sent!</h3>
+                  <p className="text-gray-500">Our team will reach out to you within 24 hours.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleEnquirySubmit} className="space-y-5">
+                  <h3 className="font-bold text-[#003a77] text-lg mb-4">Your Contact Details</h3>
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-[#003a77] font-semibold text-sm mb-1.5">Full Name *</label>
+                      <input
+                        type="text" name="name" value={enquiryForm.name}
+                        onChange={handleEnquiryChange} required placeholder="Enter your full name"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-800 text-sm bg-gray-50/50 focus:outline-none focus:border-orange-500 transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[#003a77] font-semibold text-sm mb-1.5">Phone Number *</label>
+                      <input
+                        type="tel" name="phone" value={enquiryForm.phone}
+                        onChange={handleEnquiryChange} required placeholder="+91 9876543210"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-800 text-sm bg-gray-50/50 focus:outline-none focus:border-orange-500 transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[#003a77] font-semibold text-sm mb-1.5">Email Address *</label>
+                      <input
+                        type="email" name="email" value={enquiryForm.email}
+                        onChange={handleEnquiryChange} required placeholder="your@email.com"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-800 text-sm bg-gray-50/50 focus:outline-none focus:border-orange-500 transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[#003a77] font-semibold text-sm mb-1.5">Subject *</label>
+                      <input
+                        type="text" name="subject" value={enquiryForm.subject}
+                        onChange={handleEnquiryChange} required placeholder="e.g. Need Home Loan guidance"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-800 text-sm bg-gray-50/50 focus:outline-none focus:border-orange-500 transition-all"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    type="submit" disabled={enquirySubmitting}
+                    className="cta-btn w-full text-white font-bold py-3.5 px-6 rounded-lg text-sm relative z-10 disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {enquirySubmitting ? 'Sending...' : `Submit Enquiry for ${numberToWords(selectedProducts.length)} Product${selectedProducts.length > 1 ? 's' : ''}`}
+                  </button>
+                </form>
+              )}
+            </div>
+          )}
+        </div>
+      </section>
+
 
       {/* ════════ PRODUCTS ════════ */}
       <section ref={prodRef} className="py-20 px-4 bg-white relative noise-overlay overflow-hidden">
