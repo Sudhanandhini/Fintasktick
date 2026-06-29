@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -22,6 +23,80 @@ import GalleryPage from './pages/GalleryPage';
 
 import ScrollToTop from './components/Scrolltotop';
 
+
+const DisclaimerPopup = () => {
+  const [visible, setVisible] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(true), 1200);
+    return () => clearTimeout(t);
+  }, []);
+
+  if (dismissed) return null;
+
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        bottom: '100px',
+        right: '24px',
+        zIndex: 9998,
+        width: '250px',
+        background: '#fff',
+        borderRadius: '14px',
+        boxShadow: '0 8px 32px rgba(0,58,119,0.18)',
+        border: '1.5px solid #e5e7eb',
+        overflow: 'hidden',
+        transform: visible ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.95)',
+        opacity: visible ? 1 : 0,
+        transition: 'transform 0.4s cubic-bezier(.22,1,.36,1), opacity 0.4s ease',
+        pointerEvents: visible ? 'auto' : 'none',
+      }}
+    >
+      {/* Header */}
+      <div style={{ background: '#003a77', padding: '10px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <span style={{ color: '#fff', fontWeight: 700, fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+          ⚠ Disclaimer
+        </span>
+        <button
+          onClick={() => setDismissed(true)}
+          style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', fontSize: '18px', lineHeight: 1, padding: '0 2px' }}
+          title="Close"
+        >
+          ×
+        </button>
+      </div>
+
+      {/* Body */}
+      <div style={{ padding: '14px 16px', maxHeight: '240px', overflowY: 'auto' }}>
+        <ul style={{ margin: 0, padding: '0 0 0 16px', listStyleType: 'disc', color: '#374151', fontSize: '11.5px', lineHeight: '1.7' }}>
+          <li>Fintasktick is a registered NBFC with RBI, Certified No : <strong style={{ color: '#003a77' }}>[Registration Number]</strong></li>
+          <li>We are not a bank and do not accept public deposits. All loans are subject to credit appraisal, eligibility criteria, and company policies.</li>
+          <li>Interest rates, fees, and charges are as per RBI guidelines and may change without prior notice. Past approval does not guarantee future loans.</li>
+          <li>Borrow only what you can repay. Non-payment will affect your credit score with CIBIL.</li>
+          <li>RBI does not guarantee repayment of loans or accuracy of information provided by NBFCs.</li>
+        </ul>
+      </div>
+
+      {/* Accept button */}
+      <div style={{ padding: '10px 16px', borderTop: '1px solid #f3f4f6' }}>
+        <button
+          onClick={() => setDismissed(true)}
+          style={{
+            width: '100%', padding: '8px', background: '#f97316', color: '#fff',
+            border: 'none', borderRadius: '8px', fontWeight: 700, fontSize: '13px',
+            cursor: 'pointer', transition: 'background 0.2s',
+          }}
+          onMouseEnter={e => e.currentTarget.style.background = '#ea580c'}
+          onMouseLeave={e => e.currentTarget.style.background = '#f97316'}
+        >
+          I Understand
+        </button>
+      </div>
+    </div>
+  );
+};
 
 const WhatsAppButton = () => (
   <a
@@ -60,6 +135,7 @@ function App() {
   <ScrollToTop />
 
       <Header />
+      <DisclaimerPopup />
       <WhatsAppButton />
       <main className="flex-grow">
         <Routes>

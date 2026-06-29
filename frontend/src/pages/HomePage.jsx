@@ -537,7 +537,7 @@ const HomePage = () => {
   ];
 
   /* ── Partner marquee ── */
-  const partners = [ 'HDFC', 'ICICI', 'Axis', 'Bandhan', 'PNB', 'Yes Bank','Bank of Baroda', 'RBL', 'South Indian Bank', 'Central Bank of India', 'L & T', 'Aditya Birla', 'Piramal', 'Bajaj Finserv', 'Tata Capital',    'JANA', 'Aavas', 'Vastu', 'Ujjivan', 'Samman Captical' ];
+  const partners = [ 'HDFC', 'ICICI', 'Axis', 'Bandhan', 'PNB', 'Yes Bank','Bank of Baroda', 'RBL', 'South Indian Bank', 'Central Bank of India', 'L & T', 'Aditya Birla', 'Piramal', 'Bajaj Finserv', 'Tata Capital',   'Kotak', 'Sundaram Home finance', 'Anand Rathi', 'Aadhar Housing', 'Truhome', 'Repco', 'Chola Mandalam', 'Godrej', 'Protium', 'IDFC', 'CSB',  'JANA', 'Aavas', 'Vastu', 'Ujjivan', 'Samman Captical' ];
 
   /* ── Popup form ── */
   const [showPopup, setShowPopup] = useState(false);

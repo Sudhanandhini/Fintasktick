@@ -368,6 +368,27 @@ const Footer = ({ services = [], companyLinks = [] }) => {
                 </div>
             </div>
 
+            {/* Disclaimer */}
+            {/* <div className="bg-[#f5f6f7] border-t border-gray-300">
+                <div className="max-w-7xl mx-auto px-4 py-6">
+                    <h4 className="text-[#003a77] font-bold text-sm mb-4 uppercase tracking-wide">Disclaimer</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     
+                        <ul className="space-y-2 text-gray-600 text-xs leading-relaxed list-disc list-inside">
+                            <li>Fintasktick is a registered NBFC with RBI, Certified No : <span className="text-[#003a77] font-medium">[Registration Number]</span></li>
+                            <li>We are not a bank and do not accept public deposits. All loans are subject to credit appraisal, eligibility criteria, and company policies.</li>
+                           
+                        </ul>
+                     
+                        <ul className="space-y-2 text-gray-600 text-xs leading-relaxed list-disc list-inside">
+                           <li>Interest rates, fees, and charges are as per RBI guidelines and may change without prior notice. Past approval does not guarantee future loans.</li>
+
+                            <li>RBI does not guarantee repayment of loans or accuracy of information provided by NBFCs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> */}
+
             {/* Bottom Bar */}
             <div className="bg-[#003a77]  border-t border-blue-800">
                 <div className="max-w-7xl mx-auto px-4 py-6">

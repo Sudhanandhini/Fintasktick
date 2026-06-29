@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Instagram, Facebook, Linkedin, Rss, ChevronDown, Menu, X } from 'lucide-react';
 import logo from '../assets/logo-full.png'
@@ -7,6 +7,16 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const closeTimer = useRef(null);
+
+  const openProducts = () => {
+    clearTimeout(closeTimer.current);
+    setProductsOpen(true);
+  };
+
+  const closeProducts = () => {
+    closeTimer.current = setTimeout(() => setProductsOpen(false), 200);
+  };
 
   const productSubmenu = [
     { name: 'Home Loan', path: '/homeloan' },
@@ -93,28 +103,36 @@ const Header = () => {
               <div
                 key={index}
                 className="relative group"
-                onMouseEnter={() => item.hasDropdown && setProductsOpen(true)}
-                onMouseLeave={() => item.hasDropdown && setProductsOpen(false)}
+                onMouseEnter={() => item.hasDropdown && openProducts()}
+                onMouseLeave={() => item.hasDropdown && closeProducts()}
               >
                 <Link
                   to={item.path}
                   className="flex items-center gap-1 text-gray-700 hover:text-orange-500 font-medium transition-colors text-sm"
+                  style={{ fontFamily: "'Gelasio', serif", fontWeight: 700 }} 
                 >
                   {item.name}
                   {item.hasDropdown && <ChevronDown size={14} className={`transition-transform duration-200 ${productsOpen ? 'rotate-180' : ''}`} />}
                 </Link>
                 {item.hasDropdown && productsOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-52 bg-white rounded-xl shadow-xl border border-gray-100 z-50 py-2">
-                    {productSubmenu.map((sub, i) => (
-                      <Link
-                        key={i}
-                        to={sub.path}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors"
-                        onClick={() => setProductsOpen(false)}
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
+                  <div
+                    className="absolute top-full left-0 w-52 bg-white rounded-xl shadow-xl border border-gray-100 z-50"
+                    style={{ paddingTop: '8px' }}
+                    onMouseEnter={openProducts}
+                    onMouseLeave={closeProducts}
+                  >
+                    <div className="py-2">
+                      {productSubmenu.map((sub, i) => (
+                        <Link
+                          key={i}
+                          to={sub.path}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors"
+                          onClick={() => setProductsOpen(false)}
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>

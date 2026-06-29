@@ -10,14 +10,41 @@
   font-family: 'DM Sans', sans-serif;
 }
 
+@font-face {
+  font-family: 'Gelasio';
+  src: url('/src/assets/fonts/Gelasio-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gelasio';
+  src: url('/src/assets/fonts/Gelasio-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
 .font-display {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Gelasio', serif;
   font-weight: 700;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+ h3, h4, h5, h6 {
+  font-family: 'Gelasio', serif;
   font-weight: 700;
+  font-size: 24px;
+}
+
+h2{
+    font-family: 'Gelasio', serif;
+  font-weight: 700;
+ 
+}
+
+
+h1{
+    font-family: 'Gelasio', serif;
+  font-weight: 700;
+ 
 }
 
 :root {
