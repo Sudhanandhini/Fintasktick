@@ -235,7 +235,7 @@ const ContactPage = () => {
 
   const contactInfo = [
     { icon: <Phone className="w-6 h-6 text-orange-500" />, title: 'Phone', details: ['+91 9164366690'] },
-    { icon: <Mail className="w-6 h-6 text-orange-500" />, title: 'Email', details: ['fintasktick@gmail.com', 'connect@fintasktick.com' ] },
+    { icon: <Mail className="w-6 h-6 text-orange-500" />, title: 'Email', details: [ 'connect@fintasktick.com', 'fintasktick@gmail.com' ] },
     { icon: <MapPin className="w-6 h-6 text-orange-500" />, title: 'Address', details: ['#99/A, 16th Main, 5th Cross', 'Sri Rama Arcade', 'Opposite to Maggi Adda', 'Vijayanagar, Bangalore 560040'] },
     { icon: <Clock className="w-6 h-6 text-orange-500" />, title: 'Business Hours', details: ['Mon - Fri: 10:00 AM - 6:30 PM', 'Sat: 10:00 AM - 5:30 PM', 'May vary depending on work'] }
   ];
@@ -429,7 +429,7 @@ const ContactPage = () => {
           <div className="space-y-4">
             {[
               { q: 'How long does the loan approval process take?', a: 'Typically, loan approval takes 3-4 days for personal loan and 7-15 days for home loan after submitting all required documents.' },
-              { q: 'What documents do I need to apply?', a: "Generally, you'll need ID proof, address proof, income proof, and bank statements." },
+              { q: 'What documents do I need to apply?', a: "Generally, you'll need ID proof, Address-proof, Income-proof, Bank-statements, and Other documents." },
               { q: 'Do you charge any fees for consultation?', a: 'No, our initial consultation is completely free.' }
             ].map((faq, i) => (
               <div key={i} className={`faq-card bg-white p-7 rounded-xl shadow-sm border border-gray-100 reveal ${faqVis ? 'active' : ''} stagger-${i + 1}`}>

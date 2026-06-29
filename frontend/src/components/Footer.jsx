@@ -5,10 +5,50 @@ import logo from '../assets/resized-image-removebg-preview.png'
 
 
 
+const DisclaimerModal = ({ onClose }) => (
+    <div
+        style={{ position: 'fixed', inset: 0, zIndex: 99999, background: 'rgba(0,0,0,0.55)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px' }}
+        onClick={onClose}
+    >
+        <div
+            style={{ background: '#fff', borderRadius: '16px', width: '100%', maxWidth: '560px', overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.25)' }}
+            onClick={e => e.stopPropagation()}
+        >
+            {/* Header */}
+            <div style={{ background: '#003a77', padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ color: '#fff', fontWeight: 700, fontSize: '15px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>⚠ Disclaimer</span>
+                <button onClick={onClose} style={{ background: 'none', border: 'none', color: '#fff', fontSize: '22px', cursor: 'pointer', lineHeight: 1 }}>×</button>
+            </div>
+            {/* Body */}
+            <div style={{ padding: '24px', maxHeight: '60vh', overflowY: 'auto' }}>
+                <ul style={{ margin: 0, padding: '0 0 0 18px', listStyleType: 'disc', color: '#374151', fontSize: '13.5px', lineHeight: '2' }}>
+                    <li>Fintasktick is a registered NBFC with RBI</li>
+                    <li>We are not a bank and do not accept public deposits. All loans are subject to credit appraisal, eligibility criteria, and company policies.</li>
+                    <li>Interest rates, fees, and charges are as per RBI guidelines and may change without prior notice. Past approval does not guarantee future loans.</li>
+                    <li>Borrow only what you can repay. Non-payment will affect your credit score with CIBIL.</li>
+                    <li>RBI does not guarantee repayment of loans or accuracy of information provided by NBFCs.</li>
+                </ul>
+            </div>
+            {/* Footer */}
+            <div style={{ padding: '16px 24px', borderTop: '1px solid #f3f4f6', display: 'flex', justifyContent: 'flex-end' }}>
+                <button
+                    onClick={onClose}
+                    style={{ background: '#f97316', color: '#fff', border: 'none', borderRadius: '8px', padding: '10px 28px', fontWeight: 700, fontSize: '14px', cursor: 'pointer' }}
+                    onMouseEnter={e => e.currentTarget.style.background = '#ea580c'}
+                    onMouseLeave={e => e.currentTarget.style.background = '#f97316'}
+                >
+                    I Understand
+                </button>
+            </div>
+        </div>
+    </div>
+);
+
 const Footer = ({ services = [], companyLinks = [] }) => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [showError, setShowError] = useState(false);
+    const [showDisclaimer, setShowDisclaimer] = useState(false);
 
     const handleSubscribe = () => {
         if (!email) {
@@ -23,6 +63,7 @@ const Footer = ({ services = [], companyLinks = [] }) => {
 
     return (
         <footer className="text-black">
+            {showDisclaimer && <DisclaimerModal onClose={() => setShowDisclaimer(false)} />}
             {/* Main Footer Content */}
             <div className="bg-[#dfe1e3]">
                 <div className="   max-w-7xl mx-auto px-4 py-16">
@@ -303,11 +344,11 @@ const Footer = ({ services = [], companyLinks = [] }) => {
                                             </Link>
                                         </li>
 
-                                              <li>
+                                              {/* <li>
                                         <Link to="/services" className="flex items-center text-black hover:text-orange-500 transition-all hover:translate-x-1">
                                             <ChevronRight size={16} className="mr-2" /> Insurance
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     
 
                                         <li>
@@ -392,11 +433,16 @@ const Footer = ({ services = [], companyLinks = [] }) => {
             {/* Bottom Bar */}
             <div className="bg-[#003a77]  border-t border-blue-800">
                 <div className="max-w-7xl mx-auto px-4 py-6">
-                    <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white">
-                        <p>Copyright © Fintasktick 2025 </p>
-                        <div className="flex gap-6 mt-4 md:mt-0">
+                    <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white gap-4">
+                        <p>Copyright © Fintasktick 2025</p>
+                        <div className="flex items-center gap-6">
+                            <button
+                                onClick={() => setShowDisclaimer(true)}
+                                className="text-orange-400 hover:text-orange-300 underline underline-offset-2 font-medium transition-colors"
+                            >
+                                Disclaimer
+                            </button>
                             <Link to="https://www.sunsys.in/" className="hover:text-white">Developed By Sunsys Technologies</Link>
-
                         </div>
                     </div>
                 </div>

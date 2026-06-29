@@ -135,7 +135,7 @@ function App() {
   <ScrollToTop />
 
       <Header />
-      <DisclaimerPopup />
+      {/* <DisclaimerPopup /> */}
       <WhatsAppButton />
       <main className="flex-grow">
         <Routes>

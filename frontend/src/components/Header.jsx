@@ -1,13 +1,19 @@
 import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { MapPin, Phone, Instagram, Facebook, Linkedin, Rss, ChevronDown, Menu, X } from 'lucide-react';
 import logo from '../assets/logo-full.png'
 
 const Header = () => {
+  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const closeTimer = useRef(null);
+
+  const isActive = (path) => {
+    if (path === '/') return location.pathname === '/';
+    return location.pathname.startsWith(path);
+  };
 
   const openProducts = () => {
     clearTimeout(closeTimer.current);
@@ -108,8 +114,10 @@ const Header = () => {
               >
                 <Link
                   to={item.path}
-                  className="flex items-center gap-1 text-gray-700 hover:text-orange-500 font-medium transition-colors text-sm"
-                  style={{ fontFamily: "'Gelasio', serif", fontWeight: 700 }} 
+                  className={`flex items-center gap-1 font-medium transition-colors text-sm ${
+                    isActive(item.path) ? 'text-orange-500' : 'text-gray-700 hover:text-orange-500'
+                  }`}
+                  style={{ fontFamily: "'Gelasio', serif", fontWeight: 700 }}
                 >
                   {item.name}
                   {item.hasDropdown && <ChevronDown size={14} className={`transition-transform duration-200 ${productsOpen ? 'rotate-180' : ''}`} />}
@@ -157,7 +165,7 @@ const Header = () => {
                   {item.hasDropdown ? (
                     <>
                       <button
-                        className="w-full flex items-center justify-between text-gray-700 hover:text-orange-500 font-medium py-2 text-left"
+                        className={`w-full flex items-center justify-between font-medium py-2 text-left ${isActive(item.path) ? 'text-orange-500' : 'text-gray-700 hover:text-orange-500'}`}
                         onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
                       >
                         {item.name}
@@ -181,7 +189,7 @@ const Header = () => {
                   ) : (
                     <Link
                       to={item.path}
-                      className="block text-gray-700 hover:text-orange-500 font-medium py-2"
+                      className={`block font-medium py-2 ${isActive(item.path) ? 'text-orange-500' : 'text-gray-700 hover:text-orange-500'}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
